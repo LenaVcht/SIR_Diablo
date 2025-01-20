@@ -6,9 +6,10 @@
 
 ## **Sommaire**
 - Objectif de la documentation
-- Hardware
+- Le robot Diablo
 - Connexion au robot
 - Ross
+- Bibliographie
 
 ## **Objectif de la documentation**
 
@@ -19,7 +20,7 @@
   documentation poursuit un double objectif : faciliter la prise en main du robot et ouvrir la voie à une connexion utilisant les mmWaves.
 </p>
 
-## **Hardware**
+## **Le robot Diablo**
 
 ## **Connexion au robot**
 
@@ -28,3 +29,14 @@
 ### **Connexion VNC**
 
 ### **Connexion mmWaves**
+
+<p align="left">
+  Pour établir une connexion en mmWaves nous disposons d'un modem 5G EM9190 de la marque Sierra Wireless. En plus de ce modem il faut 8 câbles jacks (2 câbles par module d'antenne)
+</p>
+
+## **Ross**
+
+## **Bibliographie**
+
+https://manuals.plus/sierra-wireless/airprime-em9190-5g-module-manual
+
