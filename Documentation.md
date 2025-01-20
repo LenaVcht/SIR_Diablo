@@ -31,7 +31,7 @@
 ### **Connexion mmWaves**
 
 <p align="left">
-  Pour établir une connexion en mmWaves nous disposons d'un modem 5G EM9190 de la marque Sierra Wireless. En plus de ce modem il faut 8 câbles jacks (2 câbles par module d'antenne)
+  Pour établir une connexion en mmWaves nous disposons d'un modem 5G EM9190 de la marque Sierra Wireless. En plus de ce modem, on peut connecter jusqu'à 8 câbles MHF7S similaire au 20955-001R-13 de la marque I-PEX  (2 câbles par module d'antenne) à connecter aux 8 connecteurs coaxials MHF7S sur le côté du modem. On peut donc utiliser jusqu'à 4 modules d'antenne 5G de type QTM525 ou QTM527.
 </p>
 
 ## **Ross**
