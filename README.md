@@ -1,6 +1,6 @@
 # **Projet SIR : Mise en place d'une connexion mmWave pour un robot Diablo**
 
-![Logo de mon projet]!(SIR_Diablo/images/robotDiablo.webp)
+!(images/robotDiablo.webp)
 
 **Référents :** Razvan Stanica (TC), Olivier Bielecki (Cité des Sciences et de l’Industrie)
 
