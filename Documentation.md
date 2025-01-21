@@ -58,9 +58,15 @@ Dans le cadre d'une expérimentation simplifiée, nous proposons de commencer av
   <img src="images/QTM525.jpg" width="300">
 </p>
 
-Pour connecter l'EM9190 avec le module d'antenne QTM525 il nous faut des câbles coaxials RF compatible avec des connecteurs type I-PEX (20956-001E-01 (MHF7S) et le connecteur présent sur le module QTM525 et supportant des hautes fréquences allant jusqu'à 26 GHz.
+A rajouter : Précision sur le shield de connecteur et autres infos importantes sur le QTM525
 
+Ensuite il faut trouver un moyen de connecter l'EM9190 au module d'antenne QTM525. Pour cela, il nous faut des câbles coaxials RF compatibles avec des connecteurs type I-PEX (20956-001E-01 (MHF7S) et le connecter (avec un fer à souder ?) sur le module QTM525. Ce câble doit aussi pouvoir supporter des fréquences allant jusqu'à plus de 26 GHz.
 
+A rajouter : ce que l'on a trouvé, problème c'est que ça va que jusqu'à 15 GHz
+
+**Mise en place théorique**
+
+A rajouter : Schéma d'une misen place théorique pour exploiter le modem 91910
   
 </p>
 
