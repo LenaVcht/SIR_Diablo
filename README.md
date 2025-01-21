@@ -16,7 +16,7 @@ Les objectifs de ce projet sont :
 aussi d’une carte mmWave ;
 - Evaluer les performances du lien mmWave en fonctions de la distance et de
 l’environnement afin de déterminer les limites de la technologie pour ce cas d’usage ;
-- Développer un module simple de contrôle du robot (avancer / reculer), avec des
+- Développer un module simple de contrôle du robot (avancer/reculer), avec des
 commandes reçues en mmWave ;
 - Configurer la redistribution d’un réseau local WiFi ou 5G vers le lien backhaul
 mmWave.
