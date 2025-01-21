@@ -30,6 +30,8 @@
 
 ### **Connexion mmWaves**
 
+Cette partie est juste une agrégation de nos recherches menées sur la connexion en mmWave et comment il serait possible de la mettre en oeuvre.
+
 **Hardware**
 
 <p align="left">
