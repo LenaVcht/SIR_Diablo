@@ -53,14 +53,22 @@ Le modem permet de connecter jusqu'à 4 modules d'antennes mmWaves, chaque modul
 Dans le cadre d'une expérimentation simplifiée, nous proposons de commencer avec un seul module QTM525. Par conséquent, cette section se concentrera uniquement sur l’utilisation du module QTM525 (le manuel est lui aussi dans le dossier "manuel")
 
 <p align="center">
-  <img src="images/EM9190connector.PNG" width="500">
+  <img src="images/QTM525.jpg" width="300">
 </p>
+
+Pour connecter l'EM9190 avec le module d'antenne QTM525 il nous faut des câbles RF compatible avec des connecteurs type I-PEX (20956-001E-01 (MHF7S) et supportant des fréquences allant jusqu'à 26 GHz.
 
 
   
 </p>
 
 ## **Ross**
+
+## **Annexes**
+
+<p align="center">
+  <img src="images/Annexe1.PNG" width="500">
+</p>
 
 ## **Bibliographie**
 
