@@ -40,6 +40,7 @@
    Interface du modem :
    - 1 connecteur M.2 : interface utilisée pour connecter le périphérique à un hôte (Annexe 1)
    - 4 connecteur 5G (MAIN, MIMO1, AUX/GNSS L1, MIMO2/GNSS L5)
+   - 8 connecteurs 
   En plus de ce modem, on peut connecter jusqu'à 8 câbles MHF7S similaire au 20955-001R-13 de la marque I-PEX  (2 câbles par module d'antenne) à connecter aux 8 connecteurs coaxials MHF7S sur le côté du modem. On peut donc utiliser jusqu'à 4 modules d'antenne 5G de type QTM525 ou QTM527.
 </p>
 
