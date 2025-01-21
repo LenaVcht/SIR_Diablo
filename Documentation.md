@@ -37,7 +37,7 @@
   <img src="https://imgs.search.brave.com/Md5F8oEZjSophWG4jSvM_w3Zs433iq5DtVdAdncX4xg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zLmFs/aWNkbi5jb20vQHNj/MDQva2YvSGJmMWQ4/MjE3MDQyZDQ3NDZi/NTc2NWRhMjM5NTdh/MjYwNC5qcGdfNzIw/eDcyMHE1MC5qcGc" width="300">
   </p>
 
-   Interface du modem :
+   Connecteurs du modem :
    - 1 connecteur M.2 : interface utilisée pour connecter le périphérique à un hôte (Annexe 1)
    - 4 connecteur 5G (MAIN, MIMO1, AUX/GNSS L1, MIMO2/GNSS L5)
    - 8 connecteurs 
