@@ -34,7 +34,7 @@
   Pour établir une connexion en mmWaves nous disposons d'un modem 5G EM9190 de la marque Sierra Wireless.
   
   <p align="center">
-  <img src="images/EM9190connector.png" width="300">
+  <img src="images/EM9190connector.PNG" width="500">
   </p>
 
    Connecteurs du modem :
