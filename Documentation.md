@@ -58,7 +58,7 @@ Dans le cadre d'une expérimentation simplifiée, nous proposons de commencer av
   <img src="images/QTM525.jpg" width="300">
 </p>
 
-Pour connecter l'EM9190 avec le module d'antenne QTM525 il nous faut des câbles RF compatible avec des connecteurs type I-PEX (20956-001E-01 (MHF7S) et supportant des fréquences allant jusqu'à 26 GHz.
+Pour connecter l'EM9190 avec le module d'antenne QTM525 il nous faut des câbles coaxials RF compatible avec des connecteurs type I-PEX (20956-001E-01 (MHF7S) et le connecteur présent sur le module QTM525 et supportant des hautes fréquences allant jusqu'à 26 GHz.
 
 
   
