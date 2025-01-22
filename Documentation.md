@@ -83,10 +83,10 @@ Voici un exemple de mise en place d'un système de transmission en mmWaves sur u
 </p>
 
 Il y a les 4 modules d'antenne et pour chaque module : 
-- les deux connecteurs IFV et IFH connecté au connecteur IF du modem EM9190 (bleu)
-- le premier connecteur pour l'alimentation (VPH) connecté au 3.7 Volt (rouge)
-- le deuxième connecteur pour l'alimentation (VDD) connecté au modem EM9190 au niveau de la prise M.2 (vert)
-- les connecteurs PON connecté au modem EM9190 au niveau de la prise M.2 (rose)
+- les deux connecteurs IFV et IFH sont connecté au connecteur IF du modem EM9190 (bleu)
+- le premier connecteur pour l'alimentation (VPH) est connecté au 3.7 Volt (rouge)
+- le deuxième connecteur pour l'alimentation (VDD) est connecté au modem EM9190 au niveau de la prise M.2 (vert)
+- chaque connecteur PON est connecté au modem EM9190 au niveau de la prise M.2 également (rose)
 
 **Problèmes rencontrés**
 
