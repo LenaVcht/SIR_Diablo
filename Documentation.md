@@ -54,18 +54,23 @@ Le modem permet de connecter jusqu'à 4 modules d'antennes mmWaves, chaque modul
 
 Dans le cadre d'une expérimentation simplifiée, nous proposons de commencer avec un seul module QTM525. Par conséquent, cette section se concentrera uniquement sur l’utilisation du module QTM525 (le manuel du QTM525 est lui aussi disponible dans le dossier "manuel").
 <p align="center">
-  <img src="images/QTM525.jpg" width="300"> <img src="images/QTM525.jpg" width="300">
+  <img src="images/QTM525.jpg" width="300"> <img src="images/QTM525schema.PNG" width="500">
 </p>
 
 Nous pouvons voir ci-dessus la vue de devant du module d'antenne QTM525, avec le connecteur et ses 10 broches. Pour notre projet nous avons besoin de 5 broches. 
-Les deux premières broches IF1 et IF2 seront connecté au conneceteurs IF du modem via des câbles adaptés. Ensuite deux autres broches pour l'alimentation. 
-Et enfin une broche pour qui sert à activer un composant du module de l'antenne.
+Les deux premières broches IF1 et IF2 seront connecté au connceteurs IF du modem via des câbles adaptés. Ensuite deux autres broches VPH et VDD sont utilisées pour l'alimentation. 
+Et enfin la broche PON sert à activer un composant du module de l'antenne.
 
 <p align="center">
-  <img src="images/QTM525.jpg" width="300">
+  <img src="images/QTM525Pin.PNG" width="520"> <img src="images/Pin2.PNG" width="400">
 </p>
 
-A rajouter : Précision sur le shield de connecteur et autres infos importantes sur le QTM525
+La connection des broches est assuré par le module IPEX MPN 20865-010E-01 monté sur le QTM525. Il est composé de 2 éléments : le premier est intégré au QTM525, le deuxième est séparé est permet de fixer les 
+fils sur les broches en l'imbrimquant sur le premier élément.
+
+<p align="center">
+  <img src="images/QTM525Pin.PNG" width="520"> <img src="images/Pin2.PNG" width="400">
+</p>
 
 Ensuite il faut trouver un moyen de connecter l'EM9190 au module d'antenne QTM525. Pour cela, il nous faut des câbles coaxials RF compatibles avec des connecteurs type I-PEX (20956-001E-01 (MHF7S) et le connecter (avec un fer à souder ?) sur le module QTM525. Ce câble doit aussi pouvoir supporter des fréquences allant jusqu'à plus de 26 GHz.
 
