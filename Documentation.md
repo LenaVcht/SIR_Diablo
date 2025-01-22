@@ -38,7 +38,7 @@ Cette partie est juste une agrégation de nos recherches menées sur la connexio
   Pour établir une connexion en mmWaves, nous utilisons un modem 5G EM9190 de la marque Sierra Wireless (le manuel de l'EM9190 se trouve dans le dossier "manuel"). 
   Ce module prend en charge plusieurs types de transmission, mais nous nous concentrerons uniquement sur la partie relative à la transmission mmWave.
 
-  A rajouter : bande de fréquence utilisable par le modem
+  A rajouter : caractéristiques et bande de fréquence utilisable par le modem
   
   Le modem dispose de plusieurs types de connecteurs, chacun ayant une utilité spécifique :
   
@@ -57,16 +57,18 @@ Dans le cadre d'une expérimentation simplifiée, nous proposons de commencer av
   <img src="images/QTM525.jpg" width="300"> <img src="images/QTM525schema.PNG" width="500">
 </p>
 
-Nous pouvons voir ci-dessus la vue de devant du module d'antenne QTM525, avec le connecteur et ses 10 broches. Pour notre projet nous avons besoin de 5 broches. 
-Les deux premières broches IF1 et IF2 seront connecté au connceteurs IF du modem via des câbles adaptés. Ensuite deux autres broches VPH et VDD sont utilisées pour l'alimentation. 
-Et enfin la broche PON sert à activer un composant du module de l'antenne.
+A rajouter : caractéristiques et bande de fréquence utilisable par le module
+
+On peut observer ci-dessus la face avant du module d'antenne QTM525, comprenant le connecteur et ses 10 broches. Pour notre projet, seules 5 broches sont nécessaires :
+- Les deux premières broches, IF1 et IF2, seront connectées aux connecteurs IF du modem à l'aide de câbles adaptés.
+- Deux autres broches, VPH et VDD, seront utilisées pour l'alimentation.
+- Enfin, la broche PON servira à activer un composant du module d'antenne.
 
 <p align="center">
   <img src="images/QTM525Pin.PNG" width="520"> <img src="images/Pin2.PNG" width="400">
 </p>
 
-La connection des broches est assuré par le module IPEX MPN 20865-010E-01 monté sur le QTM525. Il est composé de 2 éléments : le premier est intégré au QTM525, le deuxième est séparé est permet de fixer les 
-fils sur les broches en l'imbrimquant sur le premier élément.
+La connexion des broches est assurée par le module IPEX MPN 20865-010E-01, monté sur le QTM525. Ce module est composé de deux parties : la première est intégrée au QTM525, tandis que la seconde est un élément distinct permettant de fixer les fils sur les broches en s’emboîtant sur la première partie.
 
 <p align="center">
   <img src="images/Modulebroche.PNG" width="300">
