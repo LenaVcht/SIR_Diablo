@@ -68,7 +68,7 @@ On peut observer ci-dessus la face avant du module d'antenne QTM525, comprenant 
   <img src="images/QTM525Pin.PNG" width="520"> <img src="images/Pin2.PNG" width="400">
 </p>
 
-La connexion des broches est assurée par le module IPEX MPN 20865-010E-01, monté sur le QTM525. Ce module est composé de deux parties : la première est intégrée au QTM525, tandis que la seconde est un élément distinct permettant de fixer les fils sur les broches en s’emboîtant sur la première partie.
+La connexion des broches est assurée par le module IPEX MPN 20865-010E-01, monté sur le QTM525. Ce module est composé de deux parties, la première est intégrée au QTM525, tandis que la seconde est un élément distinct permettant de fixer les fils sur les broches en s’emboîtant sur la première partie.
 
 <p align="center">
   <img src="images/Modulebroche.PNG" width="300">
