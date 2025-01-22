@@ -53,6 +53,13 @@ Pour ce projet, nous nous concentrerons exclusivement sur les interfaces liées 
 Le modem permet de connecter jusqu'à 4 modules d'antennes mmWaves, chaque module étant relié par 2 câbles : l’un à une entrée H (Horizontale) et l’autre à une entrée V (Verticale). Les modules d'antennes compatibles avec le modem EM9190 sont les modèles QTM525 et QTM527, la principale différence résidant dans leur puissance d'émission. L'utilisation de 4 antennes n'est pas obligatoire, notamment avec le module QTM525, mais il est impératif de respecter l’assignation correcte des ports mmWave dans chaque configuration (voir Annexe 1).
 
 Dans le cadre d'une expérimentation simplifiée, nous proposons de commencer avec un seul module QTM525. Par conséquent, cette section se concentrera uniquement sur l’utilisation du module QTM525 (le manuel du QTM525 est lui aussi disponible dans le dossier "manuel").
+<p align="center">
+  <img src="images/QTM525.jpg" width="300"> <img src="images/QTM525.jpg" width="300">
+</p>
+
+Nous pouvons voir ci-dessus la vue de devant du module d'antenne QTM525, avec le connecteur et ses 10 broches. Pour notre projet nous avons besoin de 5 broches. 
+Les deux premières broches IF1 et IF2 seront connecté au conneceteurs IF du modem via des câbles adaptés. Ensuite deux autres broches pour l'alimentation. 
+Et enfin une broche pour qui sert à activer un composant du module de l'antenne.
 
 <p align="center">
   <img src="images/QTM525.jpg" width="300">
