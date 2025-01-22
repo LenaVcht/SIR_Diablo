@@ -13,7 +13,7 @@
 
 ## **Objectif de la documentation**
 
-<p align="left">1
+<p align="left">
   Dans le cadre de notre projet sur le robot Diablo, nous avons dû faire face à un matériel, un environnement et un langage nouveaux. Les objectifs étant encore loin d'être atteints, 
   nous avons jugé essentiel de créer une documentation solide pour permettre à de futurs étudiants de poursuivre ce travail. Nous avons donc mis un point d'honneur à rédiger une 
   documentation complète, claire et accessible. Une autre difficulté majeure réside dans l’exploitation des mmWaves et la compatibilité des modules 5G avec le robot. Ainsi, cette 
@@ -35,7 +35,7 @@ Cette partie est juste une agrégation de nos recherches menées sur la connexio
 **Hardware**
 
 <p align="left">
-  Pour établir une connexion en mmWaves, nous utilisons un modem 5G EM9190 de la marque Sierra Wireless (le manuel se trouve dans le dossier "manuel"). 
+  Pour établir une connexion en mmWaves, nous utilisons un modem 5G EM9190 de la marque Sierra Wireless (le manuel de l'EM9190 se trouve dans le dossier "manuel"). 
   Ce module prend en charge plusieurs types de transmission, mais nous nous concentrerons uniquement sur la partie relative à la transmission mmWave.
   
   Le modem dispose de plusieurs types de connecteurs, chacun ayant une utilité spécifique :
@@ -52,7 +52,7 @@ Pour ce projet, nous nous concentrerons exclusivement sur les interfaces liées 
 
 Le modem permet de connecter jusqu'à 4 modules d'antennes mmWaves, chaque module étant relié par 2 câbles : l’un à une entrée H (Horizontale) et l’autre à une entrée V (Verticale). Les modules d'antennes compatibles avec le modem EM9190 sont les modèles QTM525 et QTM527, la principale différence résidant dans leur puissance d'émission. L'utilisation de 4 antennes n'est pas obligatoire, notamment avec le module QTM525, mais il est impératif de respecter l’assignation correcte des ports mmWave dans chaque configuration (voir Annexe 1).
 
-Dans le cadre d'une expérimentation simplifiée, nous proposons de commencer avec un seul module QTM525. Par conséquent, cette section se concentrera uniquement sur l’utilisation du module QTM525 (le manuel est lui aussi dans le dossier "manuel")
+Dans le cadre d'une expérimentation simplifiée, nous proposons de commencer avec un seul module QTM525. Par conséquent, cette section se concentrera uniquement sur l’utilisation du module QTM525 (le manuel du QTM525 est lui aussi disponible dans le dossier "manuel").
 
 <p align="center">
   <img src="images/QTM525.jpg" width="300">
