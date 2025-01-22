@@ -69,7 +69,7 @@ La connection des broches est assuré par le module IPEX MPN 20865-010E-01 mont�
 fils sur les broches en l'imbrimquant sur le premier élément.
 
 <p align="center">
-  <img src="images/QTM525Pin.PNG" width="520"> <img src="images/Pin2.PNG" width="400">
+  <img src="images/Modulebroche.PNG" width="500">
 </p>
 
 Ensuite il faut trouver un moyen de connecter l'EM9190 au module d'antenne QTM525. Pour cela, il nous faut des câbles coaxials RF compatibles avec des connecteurs type I-PEX (20956-001E-01 (MHF7S) et le connecter (avec un fer à souder ?) sur le module QTM525. Ce câble doit aussi pouvoir supporter des fréquences allant jusqu'à plus de 26 GHz.
