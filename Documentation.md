@@ -37,6 +37,8 @@ Cette partie est juste une agrégation de nos recherches menées sur la connexio
 <p align="left">
   Pour établir une connexion en mmWaves, nous utilisons un modem 5G EM9190 de la marque Sierra Wireless (le manuel de l'EM9190 se trouve dans le dossier "manuel"). 
   Ce module prend en charge plusieurs types de transmission, mais nous nous concentrerons uniquement sur la partie relative à la transmission mmWave.
+
+  A rajouter : bande de fréquence utilisable par le modem
   
   Le modem dispose de plusieurs types de connecteurs, chacun ayant une utilité spécifique :
   
@@ -69,16 +71,18 @@ La connection des broches est assuré par le module IPEX MPN 20865-010E-01 mont�
 fils sur les broches en l'imbrimquant sur le premier élément.
 
 <p align="center">
-  <img src="images/Modulebroche.PNG" width="500">
+  <img src="images/Modulebroche.PNG" width="300">
 </p>
 
-Ensuite il faut trouver un moyen de connecter l'EM9190 au module d'antenne QTM525. Pour cela, il nous faut des câbles coaxials RF compatibles avec des connecteurs type I-PEX (20956-001E-01 (MHF7S) et le connecter (avec un fer à souder ?) sur le module QTM525. Ce câble doit aussi pouvoir supporter des fréquences allant jusqu'à plus de 26 GHz.
+**Mise en place**
 
-A rajouter : ce que l'on a trouvé, problème c'est que ça va que jusqu'à 15 GHz
+Voici la mise en place du système de transmission en mmWaves
 
-**Mise en place théorique**
+A rajouter : Schéma mise en place et explication
 
-A rajouter : Schéma d'une misen place théorique pour exploiter le modem 91910
+**Problèmes rencontrés**
+
+A rajouter : Connecteurs, comment connecter, prise M.2, commande
   
 </p>
 
