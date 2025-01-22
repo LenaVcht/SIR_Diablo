@@ -76,9 +76,17 @@ fils sur les broches en l'imbrimquant sur le premier élément.
 
 **Mise en place**
 
-Voici la mise en place du système de transmission en mmWaves
+Voici un exemple de mise en place d'un système de transmission en mmWaves sur un ordinateur.
 
-A rajouter : Schéma mise en place et explication
+<p align="center">
+  <img src="images/Mise en place.PNG" width="600">
+</p>
+
+Il y a les 4 modules d'antenne et pour chaque module : 
+- les deux connecteurs IFV et IFH connecté au connecteur IF du modem EM9190 (bleu)
+- le premier connecteur pour l'alimentation (VPH) connecté au 3.7 Volt (rouge)
+- le deuxième connecteur pour l'alimentation (VDD) connecté au modem EM9190 au niveau de la prise M.2 (vert)
+- les connecteurs PON connecté au modem EM9190 au niveau de la prise M.2 (rose)
 
 **Problèmes rencontrés**
 
