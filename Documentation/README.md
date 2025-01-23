@@ -17,4 +17,3 @@
 - Le robot Diablo
 - [Connexion au robot](Connexion_au_robot.md)
 - Ross
-- Bibliographie
