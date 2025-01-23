@@ -4,7 +4,7 @@
   <img src="images/Comment ajouter le jeu Google Chrome Dinosaur à votre Android.jpg" width="500">
 </p>
 
-## **Connexion ssh**
+## **Connexion SSH**
 
 ## **Connexion VNC**
 
