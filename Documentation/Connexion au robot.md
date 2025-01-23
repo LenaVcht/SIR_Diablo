@@ -1,7 +1,7 @@
 # **Documentation du projet**
 
 <p align="center">
-  <img src="https://imgs.search.brave.com/zpZtoP-RhwrMHvearnpxKDSDop-nwRMeGeWOg9V80RM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tbGZr/M2N2NXl2bnguaS5v/cHRpbW9sZS5jb20v/Y2I6Ym4tYi4yZmUy/MS93OjEyMDEvaDo2/MjcvcTptYXV0by9m/OmJlc3QvaHR0cHM6/Ly93d3cubmluamFv/bmUuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDI0LzEyL0hv/dy10by1FbmFibGUt/b3ItRGlzYWJsZS1G/aWxlLUhpc3Rvcnkt/aW4tV2luZG93cy0x/MS5wbmc" width="500">
+  <img src="images/Comment ajouter le jeu Google Chrome Dinosaur à votre Android.jpg" width="500">
 </p>
 
 ## **Sommaire**
