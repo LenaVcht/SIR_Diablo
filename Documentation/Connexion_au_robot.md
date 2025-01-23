@@ -130,8 +130,8 @@ A rajouter :
 
 ### **Connexion mmWaves**
 
-Manuel de l'EM9190 : \
+SIte du manuel de l'EM9190 : \
 https://manuals.plus/sierra-wireless/airprime-em9190-5g-module-manual \
-Manuel technique de l'EM9190, pdf : \
-https://source.sierrawireless.com/resources/airprime/minicard/airprime_em919x-7690_product_technical_specification/#sthash.pqpB43GY.dpbs
+Site de sierra-wireless \
+https://source.sierrawireless.com/devices/em-series/em9190/#sthash.LF0QUKzM.eMAEwvXY.dpbs
 
