@@ -132,6 +132,7 @@ A rajouter :
 
 SIte du manuel de l'EM9190 : \
 https://manuals.plus/sierra-wireless/airprime-em9190-5g-module-manual \
-Site de sierra-wireless \
+
+Site de sierra-wireless : \
 https://source.sierrawireless.com/devices/em-series/em9190/#sthash.LF0QUKzM.eMAEwvXY.dpbs
 
