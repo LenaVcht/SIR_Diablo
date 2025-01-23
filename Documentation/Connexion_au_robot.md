@@ -86,7 +86,7 @@ Il y a les 4 modules d'antenne et pour chaque module :
 - le deuxième connecteur pour l'alimentation (VDD) est connecté au modem EM9190 au niveau de la prise M.2 (vert)
 - chaque connecteur PON est connecté au modem EM9190 au niveau de la prise M.2 également (rose)
 
-**Problèmes rencontrés**
+### **Problèmes rencontrés**
 
 A rajouter : Connecteurs, comment connecter, prise M.2, commande
   
