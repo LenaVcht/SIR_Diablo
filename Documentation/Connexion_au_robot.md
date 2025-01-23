@@ -93,7 +93,7 @@ Voici un exemple de mise en place d'un système de transmission en mmWaves sur u
 - Le deuxième connecteur d'alimentation (VDD) est connecté au modem EM9190, au niveau du port M.2 (en vert).
 - Chaque connecteur PON est également relié au modem EM9190, au niveau du port M.2 (en rose).
 
-### **Problèmes rencontrés**
+### **Difficultés rencontrées**
 
 A rajouter : 
 - Prise M2
