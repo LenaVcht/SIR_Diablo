@@ -96,7 +96,11 @@ Il y a les 4 modules d'antenne et pour chaque module :
 
 ### **Problèmes rencontrés**
 
-A rajouter : Connecteurs, comment connecter, prise M.2, commande
+A rajouter : 
+- Prise M2
+- Connecteurs MHF7S
+- Comment connecter
+- Commander des pièces
   
 </p>
 
