@@ -1,7 +1,7 @@
 # **Documentation du projet**
 
 <p align="center">
-  <img src="images/Comment ajouter le jeu Google Chrome Dinosaur à votre Android.jpg" width="300">
+  <img src="images/Comment ajouter le jeu Google Chrome Dinosaur à votre Android.jpg" width="500">
 </p>
 
 ## **Sommaire**
