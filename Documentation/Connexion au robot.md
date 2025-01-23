@@ -5,8 +5,8 @@
 </p>
 
 ## **Sommaire**
-- **Le robot Diablo**
-- Connexion au robot
+- Le robot Diablo
+- **Connexion au robot**
 - Ross
 - Bibliographie
 
