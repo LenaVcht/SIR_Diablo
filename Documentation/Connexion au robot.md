@@ -5,7 +5,6 @@
 </p>
 
 ## **Sommaire**
-- Objectif de la documentation
 - Le robot Diablo
 - Connexion au robot
 - Ross
