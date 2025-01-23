@@ -1,26 +1,18 @@
-# **Documentation du projet**
+# **Connexion au robot**
 
 <p align="center">
   <img src="images/Comment ajouter le jeu Google Chrome Dinosaur à votre Android.jpg" width="500">
 </p>
 
-## **Sommaire**
-- Le robot Diablo
-- **Connexion au robot**
-- Ross
-- Bibliographie
+## **Connexion ssh**
 
-## **Connexion au robot**
+## **Connexion VNC**
 
-### **Connexion ssh**
-
-### **Connexion VNC**
-
-### **Connexion mmWaves**
+## **Connexion mmWaves**
 
 Cette partie est juste une agrégation de nos recherches menées sur la connexion en mmWave et comment il serait possible de la mettre en oeuvre. Jamais nous n'avons pu experimenter cette connexion avec du vrai hardware, il est donc possible que la solution présentée ne soit pas fonctionnelle. Cette solution s'appuie sur les manuels officiels que l'on a pu trouver pendant nos recherches et ouvre la voie vers de futurs experimentations.
 
-**Modem EM9190**
+### **Modem EM9190**
 
 <p align="left">
   Pour établir une connexion en mmWaves, nous utilisons un modem 5G EM9190 de la marque Sierra Wireless (le manuel de l'EM9190 se trouve dans le dossier "manuel"). 
@@ -54,7 +46,7 @@ Le modem dispose de plusieurs types de connecteurs, chacun ayant une utilité sp
 - **4 connecteurs RF MHF4** : dédiés à la transmission via LTE/Sub-6/GNSS, désignés comme suit : MAIN, MIMO1, AUX/GNSS L1, MIMO2/GNSS L5.
 - **8 connecteurs MHF7S** : destinés à la transmission via mmWaves, identifiés par les ports suivants : IFH1, IFV1, IFH2, IFV2, IFH3, IFV3, IFH4, IFV4.
 
-**Module d'antenne QTM525**
+### **Module d'antenne QTM525**
 
 Le modem permet de connecter jusqu'à 4 modules d'antennes mmWaves, chaque module étant relié par 2 câbles : l’un à une entrée IFH (Horizontale) et l’autre à une entrée IFV (Verticale). Les modules d'antennes compatibles avec le modem EM9190 sont les modèles QTM525 et QTM527, la principale différence résidant dans leur puissance d'émission. L'utilisation de 4 antennes n'est pas obligatoire, notamment avec le module QTM525, mais il est impératif de respecter l’assignation correcte des ports mmWave dans chaque configuration (voir Annexe 1).
 
@@ -80,7 +72,7 @@ La connexion des broches est assurée par le module IPEX MPN 20865-010E-01, mont
   <img src="images/Modulebroche.PNG" width="300">
 </p>
 
-**Mise en place**
+### **Mise en place**
 
 Voici un exemple de mise en place d'un système de transmission en mmWaves sur un ordinateur.
 
