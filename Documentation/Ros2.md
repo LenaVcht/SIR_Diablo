@@ -36,8 +36,8 @@ Le script utilise plusieurs librairies python:
 La classe "KeyboardNodeControl" est la classe principale pour contrôler le robot depuis le clavier. Plusieurs fonctions et méthodes sont mises en place dans le publisher:
 
 - init dans la classe "KeyboardNodeControl": initialise le noeud, crée un publisher et initialise les paramètres du robot Diablo.
-- get_key: capture une touche pressée sur le clavier sans appuyer sur Entrée. Utilise les librairies sys, tty et termios.
-- run_keyboard_control: exécute le contrôle clavier. Il crée les messages MotionCmd, lit les caractères appuyés et publie les messages sur le topic.
+- get_key dans la classe "KeyboardNodeControl": capture une touche pressée sur le clavier sans appuyer sur Entrée. Utilise les librairies sys, tty et termios.
+- run_keyboard_control dans la classe "KeyboardNodeControl": exécute le contrôle clavier. Il crée les messages MotionCmd, lit les caractères appuyés et publie les messages sur le topic.
 - main: initialise ros2, crée une instance de la classe KeyboardControlNode, exécute le nœud (boucle ROS 2), détruit le nœud proprement et ferme ros2.
   
 ## **Récupération d'informations depuis le robot**
