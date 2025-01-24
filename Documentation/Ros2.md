@@ -31,7 +31,35 @@ Vous pouvez aussi l'installer directement depuis le site de python:
 
 ## **Contrôle depuis le clavier**
 
-Vous pouvez ensuite utiliser le package ros2 avec un node publisher python disponible sur ce dépôt pour contrôler le robot à partir de votre clavier. Le publisher publie des requêtes de mouvement sur le topic MotionCtrl de motion_msgs.msg. Afin de visualiser ces messages dans un terminal, vous pouvez utiliser la commande suivante: ros2 topic echo /diablo/MotionCmd. 
+Vous pouvez ensuite utiliser le package ros2 avec un node publisher python disponible sur ce dépôt dans le package diablo_new_ctrl. Il permet de contrôler le robot à partir de votre clavier. Le publisher publie des requêtes de mouvement sur le topic MotionCtrl de motion_msgs.msg. Afin de visualiser ces messages dans un terminal, vous pouvez utiliser la commande suivante: ros2 topic echo /diablo/MotionCmd. 
+
+### Contenu du package diablo_new_ctrl
+
+### Commandes à lancer en prérequis
+
+Avant d'utiliser un package ros2, il faut le build en utilisant colcon:
+
+```bash
+colcon build --packages-select diablo_new_ctrl
+```
+
+Avant de lancer le code python ou n'importe quel autre commande, il faut sourcer son environnement depuis le dossier diablo_ws:
+
+```bash
+source install/setup.bash
+```
+
+Il faut ensuite permettre le contrôle du robot:
+
+```bash
+ros2 run diablo_ctrl diablo_ctrl_node
+```
+
+Enfin, il faut lancer le publisher avec la commande suivante:
+
+```bash
+ros2 run diablo_new_ctrl talker
+```
 
 ### Librairies utilisées
 
@@ -44,9 +72,7 @@ Le script utilise plusieurs librairies python:
 - termios: Pour gérer le mode "raw" du terminal
 - tty: Pour capturer les touches pressées sans appuyer sur Entrée
 
-### Contenu d'un package Ros2
-
-### Fonctionnement du code
+### Fonctionnement du publisher
 
 La classe "KeyboardNodeControl" est la classe principale pour contrôler le robot depuis le clavier. Plusieurs fonctions et méthodes sont mises en place dans le publisher:
 
