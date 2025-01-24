@@ -27,6 +27,24 @@ Vous pouvez aussi l'installer directement depuis le site de python:
 
 ## **Simulations**
 
+Plusieurs simulations sont disponibles pour le robot Diablo. Directement dans le dépôt git du robot, vous avez accès à une simulation Gazebo
+
+```bash
+ros2 launch diablo_simulation gazebo.launch.py
+```
+
+et Rviz:
+
+```bash
+ros2 launch diablo_simulation ctrl.launch.py
+```
+
+La simulation Rviz permet, d'après le manuel, un contrôle à distance du robot Diablo à partir d'une interface graphique.
+
+Enfin, vous pouvez utiliser une simulation webots à partir de ce dépôt git: 
+
+- https://github.com/DDTRobot/diablo-sim-env?fbclid=IwZXh0bgNhZW0CMTEAAR0VCfyuZYg65ZIq-W_xi4qtQ5oT87qn8WLMNCBjYjokxaqp7opFCDM8sLA_aem_3PPM0bA57FoDw7_OOmJBoA
+
 ## **Commandes Terminal**
 
 ## **Contrôle depuis le clavier**
