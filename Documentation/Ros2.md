@@ -35,6 +35,50 @@ Vous pouvez ensuite utiliser le package ros2 avec un node publisher python dispo
 
 ### Contenu du package diablo_new_ctrl
 
+Un package ROS 2 est une unité de base qui contient du code, des fichiers de configuration, des messages, des services, des actions, des scripts, et toute autre ressource nécessaire pour créer une application ROS.Pour créer un package ros2, vous pouvez utiliser les commandes suivantes:
+En python:
+
+```bash
+ros2 pkg create --build-type ament_python my_package
+```
+
+En C++:
+```bash
+ros2 pkg create --build-type ament_cmake my_package
+```
+
+A noter que le package doit être créé dans le dossier src du dossier diablo_ws sur le robot Diablo.
+
+Voici les composants typiques que l'on trouve dans un package ROS 2 :
+
+```bash
+my_package/
+├── CMakeLists.txt
+├── package.xml
+├── setup.py                # (Si c'est un package Python)
+├── src/
+│   └── my_package/
+│       ├── __init__.py     # Fichier d'initialisation du package Python
+│       └── my_node.py      # Exemple de script ROS 2
+├── launch/
+│   └── my_launch_file.py   # Fichier de lancement ROS 2
+├── config/
+│   └── params.yaml         # Fichier de configuration (paramètres)
+├── msg/
+│   └── MyCustomMessage.msg # Messages personnalisés (facultatif)
+├── srv/
+│   └── MyService.srv       # Services personnalisés (facultatif)
+├── action/
+│   └── MyAction.action     # Actions personnalisées (facultatif)
+├── urdf/
+│   └── robot.urdf          # Description du robot (format URDF ou xacro)
+├── world/
+│   └── my_world.world      # Fichiers de simulation (ex. Gazebo)
+├── rviz/
+│   └── my_config.rviz      # Configuration pour RViz
+└── README.md               # Documentation du package
+```
+
 ### Commandes à lancer en prérequis
 
 Avant d'utiliser un package ros2, il faut le build en utilisant colcon:
@@ -80,10 +124,24 @@ La classe "KeyboardNodeControl" est la classe principale pour contrôler le robo
 - get_key dans la classe "KeyboardNodeControl": capture une touche pressée sur le clavier sans appuyer sur Entrée. Utilise les librairies sys, tty et termios.
 - run_keyboard_control dans la classe "KeyboardNodeControl": exécute le contrôle clavier. Il crée les messages MotionCmd, lit les caractères appuyés et publie les messages sur le topic.
 - main: initialise ros2, crée une instance de la classe KeyboardControlNode, exécute le nœud (boucle ROS 2), détruit le nœud proprement et ferme ros2.
-  
+
+Ainsi, le script capture les touches pressées sur le clavier, les lit, update le message MotionCmd à envoyer avant de le publier sur le topic, ce qui met le robot en mouvement. Le contrôle se fait en temps réel. Les fonctionnalités sont les suivantes:
+
+- Avancer: flèche du haut,
+- Reculer: flèche du bas,
+- Tourner à droite: flèche de droite,
+- Tourner à gauche: flèche de gauche,
+- Augmenter la vitesse: +,
+- Réduire la vitesse: -,
+- m: mode marche,
+- j: saut,
+- s: mode split,
+- Ctrl+C: quitter.
+
 ## **Récupération d'informations depuis le robot**
 
 ## **Bibliographie**
+
 Manuel du robot Diablo
 https://diablo-sdk-docs.readthedocs.io/en/latest/index.html
 
