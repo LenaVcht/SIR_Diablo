@@ -31,7 +31,11 @@ Vous pouvez aussi l'installer directement depuis le site de python:
 
 ## **Contrôle depuis le clavier**
 
-Vous pouvez ensuite utiliser le package ros2 avec un node publisher python disponible sur ce dépôt dans le package diablo_new_ctrl. Il permet de contrôler le robot à partir de votre clavier. Le publisher publie des requêtes de mouvement sur le topic MotionCtrl de motion_msgs.msg. Afin de visualiser ces messages dans un terminal, vous pouvez utiliser la commande suivante: ros2 topic echo /diablo/MotionCmd. 
+Vous pouvez ensuite utiliser le package ros2 avec un node publisher python disponible sur ce dépôt dans le package diablo_new_ctrl. Il permet de contrôler le robot à partir de votre clavier. Le publisher publie des requêtes de mouvement sur le topic MotionCtrl de motion_msgs.msg. Afin de visualiser ces messages dans un terminal, vous pouvez utiliser la commande suivante: 
+
+```bash
+ros2 topic echo /diablo/MotionCmd. 
+```
 
 ### Contenu du package diablo_new_ctrl
 
@@ -79,6 +83,25 @@ my_package/
 └── README.md               # Documentation du package
 ```
 
+Le package diablo_new_ctrl contient les composants suivants:
+
+```bash
+diablo_new_ctrl/
+├── package.xml
+├── setup.py                # Nécessaire pour un package Python
+├── diablo_new_ctrl/
+│   ├── __init__.py     # Fichier d'initialisation du package Python
+│   └── diablo_publisher.py      # Script python permettant le contrôle du robot Diablo
+├── ressource/
+│   ├── diablo_new_ctrl.txt    
+├── test/
+│   ├── test_copyright.py    
+│   └── test_flake8.py
+│   └── test_pep257.py      
+```
+
+Les fichiers package.xml et setup.py doivent être modifiés avec vos informations (nom, e-mail, etc...).
+
 ### Commandes à lancer en prérequis
 
 Avant d'utiliser un package ros2, il faut le build en utilisant colcon:
@@ -105,6 +128,8 @@ Enfin, il faut lancer le publisher avec la commande suivante:
 ros2 run diablo_new_ctrl talker
 ```
 
+Vous pouvez à présent contrôler le robot depuis votre clavier.
+
 ### Librairies utilisées
 
 Le script utilise plusieurs librairies python:
@@ -116,7 +141,7 @@ Le script utilise plusieurs librairies python:
 - termios: Pour gérer le mode "raw" du terminal
 - tty: Pour capturer les touches pressées sans appuyer sur Entrée
 
-### Fonctionnement du publisher
+### Fonctionnement du publisher diablo_publisher
 
 La classe "KeyboardNodeControl" est la classe principale pour contrôler le robot depuis le clavier. Plusieurs fonctions et méthodes sont mises en place dans le publisher:
 
