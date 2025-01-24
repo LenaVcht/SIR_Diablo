@@ -33,6 +33,8 @@ Vous pouvez aussi l'installer directement depuis le site de python:
 
 Vous pouvez ensuite utiliser le package ros2 avec un node publisher python disponible sur ce dépôt pour contrôler le robot à partir de votre clavier. Le publisher publie des requêtes de mouvement sur le topic MotionCtrl de motion_msgs.msg. Afin de visualiser ces messages dans un terminal, vous pouvez utiliser la commande suivante: ros2 topic echo /diablo/MotionCmd. 
 
+### Librairies utilisées
+
 Le script utilise plusieurs librairies python:
 
 - rclpy: Bibliothèque principale de ROS 2,
@@ -41,6 +43,10 @@ Le script utilise plusieurs librairies python:
 - sys: Module système pour interagir avec le terminal
 - termios: Pour gérer le mode "raw" du terminal
 - tty: Pour capturer les touches pressées sans appuyer sur Entrée
+
+### Contenu d'un package Ros2
+
+### Fonctionnement du code
 
 La classe "KeyboardNodeControl" est la classe principale pour contrôler le robot depuis le clavier. Plusieurs fonctions et méthodes sont mises en place dans le publisher:
 
