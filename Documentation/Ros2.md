@@ -168,18 +168,18 @@ Ainsi, le script capture les touches pressées sur le clavier, les lit, update l
 ## **Bibliographie**
 
 Manuel du robot Diablo
-https://diablo-sdk-docs.readthedocs.io/en/latest/index.html
+- https://diablo-sdk-docs.readthedocs.io/en/latest/index.html
 
 Site du constructeur du robot Diablo
-https://directdrive.com/
+- https://directdrive.com/
 
 Documentation ros2 foxy
-https://docs.ros.org/en/foxy/index.html
+- https://docs.ros.org/en/foxy/index.html
 
 Dépôt git du robot Diablo
-https://github.com/DDTRobot/diablo_ros2/blob/main/docs/docs_en/README_EN.md
+- https://github.com/DDTRobot/diablo_ros2/blob/main/docs/docs_en/README_EN.md
 
 Installation de python
-https://www.python.org/downloads/
+- https://www.python.org/downloads/
 
 
