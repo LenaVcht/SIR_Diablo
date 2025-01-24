@@ -64,6 +64,7 @@ https://docs.ros.org/en/foxy/index.html
 Dépôt git du robot Diablo
 https://github.com/DDTRobot/diablo_ros2/blob/main/docs/docs_en/README_EN.md
 
-
+Installation de python
+https://www.python.org/downloads/
 
 
