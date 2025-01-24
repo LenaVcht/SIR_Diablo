@@ -17,8 +17,10 @@ L'ensemble d'outils informatiques Ros2 est installé sur le robot Diablo. Il per
 A noter que ros2 foxy fonctionne sous ubuntu 20.04 et windows. Vous trouverez également des tutoriels ros2 utiles pour la prise en main de cet outil. ROS 2 Foxy est officiellement compatible avec Python 3.8, car cette version est celle incluse par défaut dans Ubuntu 20.04. 
 Pour installer cette version de python, il faut lancer les commandes suivantes dans un terminal sous linux:
 
+```bash
 sudo apt update
 sudo apt install python3.8 python3.8-venv python3.8-dev
+```
 
 Vous pouvez aussi l'installer directement depuis le site de python:
 - https://www.python.org/downloads/
