@@ -46,7 +46,120 @@ Enfin, vous pouvez utiliser une simulation webots à partir de ce dépôt git:
 
 - https://github.com/DDTRobot/diablo-sim-env?fbclid=IwZXh0bgNhZW0CMTEAAR0VCfyuZYg65ZIq-W_xi4qtQ5oT87qn8WLMNCBjYjokxaqp7opFCDM8sLA_aem_3PPM0bA57FoDw7_OOmJBoA
 
+## **Contrôle du robot**
+
+Mais ce qui nous intéresse réellement, c'est bien sûr de pouvoir contrôler le robot directement depuis notre ordinateur. Pour cela, plusieurs possibilités : on peut lui envoyer des lignes de commandes directement depuis le terminal de notre ordinateur, ou encore éxécuter un script qui nous permettra de le contrôler depuis certaines touches de notre clavier.
+
+Mais ces méthodes différentes nécessitent la même préparation pour fonctionner dans notre environnement de travail.
+
+Tout d'abord, une fois que le robot est connecté au même réseau (Wi-Fi) que nous, il nous faut son adresse IP. Dans notre exemple, elle se présente sous cette forme : **10.56.12.225**. 
+On peut alors s'y conecter grâce à la commande suivante :
+
+```bash
+ssh diablo@10.56.12.225
+```
+*On nous demande alors un mot de passe qui dans le cas de cette connexion est **diablo123**.*
+
+Une fois connectés, notre terminal devient un terminal du robot. Il est maintenant possible d'accéder à tous les packages et noeuds ros2 installés sur le robot depuis ce même terminal.
+
+Avant de lancer le code python ou n'importe quel autre commande, il faut sourcer son environnement depuis le dossier diablo_ws :
+
+```bash
+source install/setup.bash
+```
+
+Enfin, il est possible de lancer le noeud qui permet le contrôle du robot :
+
+```bash
+ros2 run diablo_ctrl ciablo_ctrl_node
+```
+
+Le robot est alors prêt à recevoir des commandes !
+
 ### **Commandes Terminal**
+
+Une fois cete préparation effectuée, on peut ouvrir un second terminal (également connecté au robot) afin de lui envoyer des commandes. 
+
+#### Etablir la structure des messages
+
+Tout d'abord, il faut que l'on récupère la forme des messages compris par le robot. En étudiant la structure des paquets du robot, on peut déduire que les messages de commande sont échangés sur le topic **/diablo/MotionCmd**. On peut alors utiliser la commande suivante : 
+
+```bash
+ros2 topic type /diablo/MotionCmd
+```
+
+Cette commande nous permet d'obtenir le type de messages échangés sur le topic : **motion_msgs/msg/MotionCtrl**. Avec la commande suivante, on pourra obtenir la structure précise de ces messages : 
+
+```bash
+ros2 interface show motion_msgs/msg/MotionCtrl
+```
+Ce qui nous renvoie quelque chose sous cette forme : 
+
+```bash
+bool mode_mark
+
+MovementCtrlData value
+MovementCtrlMode mode
+```
+
+Pour avoir plus de détails sur cette structure (ce qui est compris dans les **MovementCtrlData** et **MovementCtrlMode** par exemple), on peut également écouter directement le topic pour analyser les messages que l'on voit passer. On utilise cette commande :
+
+```bash
+ros2 topic echo /diablo/MotionCmd
+```
+
+Voici la structure précise des messages que l'on observe : 
+
+```bash
+{
+  mode_mark: false,
+  value: {
+    forward: 0.0,
+    left: 0.0,
+    up: 0.0,
+    roll: 0.0,
+    pitch: 0.0,
+    leg_split: 0.0
+  },
+  mode: {
+    pitch_ctrl_mode: false,
+    roll_ctrl_mode: false,
+    height_ctrl_mode: false,
+    stand_mode: false,
+    jump_mode: false,
+    split_mode: false
+  }
+}
+```
+
+#### Envoyer nos propres messages
+
+Maintenant que l'on connaît la structure des messages envoyés au robot, il ne reste plus qu'à publier nos propres messages directement sur le topic. Pour cela, on va réutiliser la forme vue précédemment, mais en modifiant les valeurs des variables qui nous intéressent. 
+
+Par exemple, si je veux que le robot tourne vers la gauche, je vais lui tenter de lui envoyer ce message : 
+
+
+```bash
+{
+  mode_mark: false,
+  value: {
+    forward: 0.0,
+    left: 1.0,
+    up: 0.0,
+    roll: 0.0,
+    pitch: 0.0,
+    leg_split: 0.0
+  },
+  mode: {
+    pitch_ctrl_mode: false,
+    roll_ctrl_mode: false,
+    height_ctrl_mode: false,
+    stand_mode: false,
+    jump_mode: false,
+    split_mode: false
+  }
+}
+```
 
 ### **Contrôle depuis le clavier**
 
@@ -59,6 +172,7 @@ ros2 topic echo /diablo/MotionCmd.
 #### Contenu du package diablo_new_ctrl
 
 Un package ROS 2 est une unité de base qui contient du code, des fichiers de configuration, des messages, des services, des actions, des scripts, et toute autre ressource nécessaire pour créer une application ROS.Pour créer un package ros2, vous pouvez utiliser les commandes suivantes:
+
 En python:
 
 ```bash
