@@ -2,9 +2,10 @@
 
 - [Prérequis](#Prérequis)
 - [Simulations](#Simulations)
-- [Commandes Terminal](#Commandes-Terminal)
-- [Contrôle depuis le clavier](#Contrôle-depuis-le-clavier)
-- [Récupération d'informations depuis le robot](#Récupération-d'informations-depuis-le-robot)
+- [Contrôle du robot](#Contrôle-du-robot)
+  - [Commandes Terminal](#Commandes-Terminal)
+  - [Contrôle depuis le clavier](#Contrôle-depuis-le-clavier)
+  - [Récupération d'informations depuis le robot](#Récupération-d'informations-depuis-le-robot)
 - [Bibliographie](#Bibliographie)
 
 ## **Prérequis**
@@ -45,9 +46,9 @@ Enfin, vous pouvez utiliser une simulation webots à partir de ce dépôt git:
 
 - https://github.com/DDTRobot/diablo-sim-env?fbclid=IwZXh0bgNhZW0CMTEAAR0VCfyuZYg65ZIq-W_xi4qtQ5oT87qn8WLMNCBjYjokxaqp7opFCDM8sLA_aem_3PPM0bA57FoDw7_OOmJBoA
 
-## **Commandes Terminal**
+### **Commandes Terminal**
 
-## **Contrôle depuis le clavier**
+### **Contrôle depuis le clavier**
 
 Vous pouvez ensuite utiliser le package ros2 avec un node publisher python disponible sur ce dépôt dans le package diablo_new_ctrl. Il permet de contrôler le robot à partir de votre clavier. Le publisher publie des requêtes de mouvement sur le topic MotionCtrl de motion_msgs.msg. Afin de visualiser ces messages dans un terminal, vous pouvez utiliser la commande suivante: 
 
@@ -55,7 +56,7 @@ Vous pouvez ensuite utiliser le package ros2 avec un node publisher python dispo
 ros2 topic echo /diablo/MotionCmd. 
 ```
 
-### Contenu du package diablo_new_ctrl
+#### Contenu du package diablo_new_ctrl
 
 Un package ROS 2 est une unité de base qui contient du code, des fichiers de configuration, des messages, des services, des actions, des scripts, et toute autre ressource nécessaire pour créer une application ROS.Pour créer un package ros2, vous pouvez utiliser les commandes suivantes:
 En python:
@@ -120,7 +121,7 @@ diablo_new_ctrl/
 
 Les fichiers package.xml et setup.py doivent être modifiés avec vos informations (nom, e-mail, etc...).
 
-### Commandes à lancer en prérequis
+#### Commandes à lancer en prérequis
 
 Avant d'utiliser un package ros2, il faut le build en utilisant colcon:
 
@@ -148,7 +149,7 @@ ros2 run diablo_new_ctrl talker
 
 Vous pouvez à présent contrôler le robot depuis votre clavier.
 
-### Librairies utilisées
+#### Librairies utilisées
 
 Le script utilise plusieurs librairies python:
 
@@ -159,7 +160,7 @@ Le script utilise plusieurs librairies python:
 - termios: Pour gérer le mode "raw" du terminal
 - tty: Pour capturer les touches pressées sans appuyer sur Entrée
 
-### Fonctionnement du publisher diablo_publisher
+#### Fonctionnement du publisher diablo_publisher
 
 La classe "KeyboardNodeControl" est la classe principale pour contrôler le robot depuis le clavier. Plusieurs fonctions et méthodes sont mises en place dans le publisher:
 
@@ -181,7 +182,7 @@ Ainsi, le script capture les touches pressées sur le clavier, les lit, update l
 - s: mode split,
 - Ctrl+C: quitter.
 
-## **Récupération d'informations depuis le robot**
+### **Récupération d'informations depuis le robot**
 
 ## **Bibliographie**
 
