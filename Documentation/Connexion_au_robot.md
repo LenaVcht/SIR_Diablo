@@ -104,7 +104,7 @@ Voici un exemple de mise en place d'un système de transmission en mmWaves sur u
 
 La première difficultés rencontrée concerne la connexion à l'hôte via le **connecteur M.2**. Ce connecteur est utilisé principalement dans les ordinateurs modernes pour connecter des composants comme des disques SSD, des cartes réseau sans fil et d'autres périphériques d'extension. On trouve l'emplacement de cette prise M.2 sur certaines cartes mères d'ordinateur par exemple. La carte réseau EM9190 utilise un connecteur **M.2 Type 3042-S3-B, conforme à la spécification PCI Express M.2 Revision 3.0, Version 1.2**. Ce connecteur est conçu pour des modules **WWAN** et prend en charge les interfaces **PCIe et USB 3.1**.
 
-A noter : Dans le cas d'une transmission mmWave, il est **impossible** d'utiliser l'interface USB.
+**A noter :** Dans le cas d'une transmission mmWave, il est **impossible** d'utiliser l'interface USB.
 
 Donc dans le cadre de notre projet, pour pouvoir utiliser l'EM9190 avec un ordinateur et/ou une carte raspberry il faut un slot **M.2 Type B** prenant en charge **WWAN** et l'interface **PCIe**. Si l'hôte n'a pas de port M.2 compatible, on peut utiliser un **adaptateur M.2 vers PCIe** prenant en charge les modules WWAN, ce qui est rare.
 
