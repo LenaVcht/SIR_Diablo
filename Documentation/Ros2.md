@@ -265,6 +265,12 @@ Avant d'utiliser un package ros2, il faut le build en utilisant colcon:
 colcon build --packages-select diablo_new_ctrl
 ```
 
+Si cette commande renvoie une erreur disant que le package MotionCmd ne peut pas être build, il faut envoyer le build séparémment avant de rebuild notre package:
+
+```bash
+colcon build --packages-select motion_msgs
+```
+
 Il faut également efectuer les commandes explicitées au début de la partie [Contrôle du robot](#Contrôle-du-robot) pour sourcer l'environnement, et lancer le noeud de contrôle du robot.
 
 Enfin, il faut lancer le publisher avec la commande suivante:
