@@ -95,7 +95,6 @@ Voici un exemple de mise en place d'un système de transmission en mmWaves sur u
 
 ### **Difficultés rencontrées**
 
-A rajouter : 
 - Prise M2
 - Connecteurs MHF7S
 - Comment connecter
