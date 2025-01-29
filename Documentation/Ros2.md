@@ -259,6 +259,8 @@ diablo_new_ctrl/
 
 #### Commandes à lancer en prérequis
 
+Il faut clôner le package diablo_new_ctrl depuis le dossier code de ce git.
+
 Avant d'utiliser un package ros2, il faut le build en utilisant colcon:
 
 ```bash
