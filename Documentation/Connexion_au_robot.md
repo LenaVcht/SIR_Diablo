@@ -100,8 +100,10 @@ A rajouter :
 - Connecteurs MHF7S
 - Comment connecter
 - Commander des pièces
-  
-</p>
+
+#### **Prise M.2**
+
+La première difficultés rencontrée concerne la prise M.2. Ce connecteur est utilisé principalement dans les ordinateurs modernes pour connecter des composants comme des disques SSD, des cartes réseau sans fil, des cartes grahiques et d'autres périphériques d'extension. Elle remplace progressivement le connecteur mSATA dans de nombreux appareils. On trouve l'emplacement de cette prise M.2 sur la carte mère d'un ordinateur par exemple.
 
 ## **Annexes**
 
