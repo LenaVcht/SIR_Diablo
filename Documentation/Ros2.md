@@ -291,6 +291,7 @@ Le script utilise plusieurs librairies python:
 - sys: Module système pour interagir avec le terminal
 - termios: Pour gérer le mode "raw" du terminal
 - tty: Pour capturer les touches pressées sans appuyer sur Entrée
+- time: Module pour que le robot s'arrête après une durée définie
 
 #### Fonctionnement du publisher diablo_publisher
 
@@ -298,10 +299,10 @@ La classe "KeyboardNodeControl" est la classe principale pour contrôler le robo
 
 - init dans la classe "KeyboardNodeControl": initialise le noeud, crée un publisher et initialise les paramètres du robot Diablo.
 - get_key dans la classe "KeyboardNodeControl": capture une touche pressée sur le clavier sans appuyer sur Entrée. Utilise les librairies sys, tty et termios.
-- run_keyboard_control dans la classe "KeyboardNodeControl": exécute le contrôle clavier. Il crée les messages MotionCmd, lit les caractères appuyés et publie les messages sur le topic.
+- run_keyboard_control dans la classe "KeyboardNodeControl": exécute le contrôle clavier. Il crée les messages MotionCmd, lit les caractères appuyéss. Il également publie les messages sur le topic et arrête tout mouvement après 0.5 secondes si on relâche la touche appuyée.
 - main: initialise ros2, crée une instance de la classe KeyboardControlNode, exécute le nœud (boucle ROS 2), détruit le nœud proprement et ferme ros2.
 
-Ainsi, le script capture les touches pressées sur le clavier, les lit, update le message MotionCmd à envoyer avant de le publier sur le topic, ce qui met le robot en mouvement. Le contrôle se fait en temps réel. Les fonctionnalités sont les suivantes:
+Ainsi, le script capture les touches pressées sur le clavier, les lit, update le message MotionCmd à envoyer avant de le publier sur le topic, ce qui met le robot en mouvement pendant 0.5 secondes si on relâche la touche et en continu si on continue à appuyer. Le contrôle se fait en temps réel. Les fonctionnalités sont les suivantes:
 
 - Avancer: flèche du haut,
 - Reculer: flèche du bas,
