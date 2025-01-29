@@ -161,13 +161,29 @@ Par exemple, si je veux que le robot tourne vers la gauche, je vais lui tenter d
 }
 ```
 
-### **Contrôle depuis le clavier**
-
-Vous pouvez ensuite utiliser le package ros2 avec un node publisher python disponible sur ce dépôt dans le package diablo_new_ctrl. Il permet de contrôler le robot à partir de votre clavier. Le publisher publie des requêtes de mouvement sur le topic MotionCtrl de motion_msgs.msg. Afin de visualiser ces messages dans un terminal, vous pouvez utiliser la commande suivante: 
+Pour envoyer ce message au robot, on utilise la commande suivante qui nous permet d'écrire dans le topic **/diablo/MotionCmd** :
 
 ```bash
-ros2 topic echo /diablo/MotionCmd. 
+ros2 topic pub /diablo/MotionCmd motion_msgs/msg/MotionCtrl [contenu du message]
 ```
+
+Ce qui donne, avec notre message d'exemple :
+
+```bash
+ros2 topic pub /diablo/MotionCmd motion_msgs/msg/MotionCtrl "{mode_mark: false, value: {forward: 0.0, left: 1.0, up: 0.0, roll: 0.0, pitch: 0.0, leg_split: 0.0}, mode: {pitch_ctrl_mode: false, roll_ctrl_mode: false, height_ctrl_mode: false, stand_mode: false, jump_mode: false, split_mode: false}}"
+```
+
+Voilà maintenant notre robot qui se met à tourner sur lui-même, vers la gauche. Mais, comment l'arrêter ? En effet, même si l'on n'envoie qu'un seul message, l'information reste dans le robot jusqu'à être modifiée. Le robot tourne donc en continu. Pour le stopper, une seule possibilité, lui envoyer directement le message inverse. Dans notre exemple :
+
+```bash
+ros2 topic pub /diablo/MotionCmd motion_msgs/msg/MotionCtrl "{mode_mark: false, value: {forward: 0.0, left: 0.0, up: 0.0, roll: 0.0, pitch: 0.0, leg_split: 0.0}, mode: {pitch_ctrl_mode: false, roll_ctrl_mode: false, height_ctrl_mode: false, stand_mode: false, jump_mode: false, split_mode: false}}"
+```
+
+Cette méthode fonctionne donc pour envoyer des ordres simples au robot. Mais attention, si on lui donne l'ordre d'avancer, il faut être prêt à envoyer l'ordre de s'arrêter dans la foulée, ce qui peut s'avérer compliqué. Une méthode alternative plus intéressante serait de transformer notre clavier en télécommande en assignant des commande à nos différentes touches. C'est ce que nous allons présenter dans la partie suivante.
+
+### **Contrôle depuis le clavier**
+
+Pour cela, nous pouvons utiliser le package ros2 avec un node publisher python disponible sur ce dépôt : diablo_new_ctrl. Il permet de contrôler le robot à partir de votre clavier. Le publisher publie des requêtes de mouvement sur le topic MotionCtrl pour nous, en lisant les inputs de notre clavier.
 
 #### Contenu du package diablo_new_ctrl
 
@@ -233,7 +249,7 @@ diablo_new_ctrl/
 │   └── test_pep257.py      
 ```
 
-Les fichiers package.xml et setup.py doivent être modifiés avec vos informations (nom, e-mail, etc...).
+*Remarque : Les fichiers package.xml et setup.py doivent être modifiés avec vos informations (nom, e-mail, etc...).*
 
 #### Commandes à lancer en prérequis
 
@@ -243,17 +259,7 @@ Avant d'utiliser un package ros2, il faut le build en utilisant colcon:
 colcon build --packages-select diablo_new_ctrl
 ```
 
-Avant de lancer le code python ou n'importe quel autre commande, il faut sourcer son environnement depuis le dossier diablo_ws:
-
-```bash
-source install/setup.bash
-```
-
-Il faut ensuite permettre le contrôle du robot:
-
-```bash
-ros2 run diablo_ctrl diablo_ctrl_node
-```
+Il faut également efectuer les commandes explicitées au début de la partie [Contrôle du robot](#Contrôle-du-robot) pour sourcer l'environnement, et lancer le noeud de contrôle du robot.
 
 Enfin, il faut lancer le publisher avec la commande suivante:
 
