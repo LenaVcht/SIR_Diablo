@@ -95,16 +95,21 @@ Voici un exemple de mise en place d'un système de transmission en mmWaves sur u
 
 ### **Difficultés rencontrées**
 
-- Prise M2
-- Connecteurs MHF7S
-- Comment connecter
-- Commander des pièces
-
 #### **Connexion à l'hôte**
 
-La première difficultés rencontrée concerne la connexion à l'hôte via le **connecteur M.2**. Ce connecteur est utilisé principalement dans les ordinateurs modernes pour connecter des composants comme des disques SSD, des cartes réseau sans fil et d'autres périphériques d'extension. On trouve l'emplacement de cette prise M.2 sur certaines cartes mères d'ordinateur par exemple. La carte réseau EM9190 utilise un connecteur **M.2 Type 3042-S3-B, conforme à la spécification PCI Express M.2 Revision 3.0, Version 1.2**. Ce connecteur est conçu pour des modules **WWAN** et prend en charge les interfaces **PCIe et USB 3.1**.
+La première difficulté rencontrée concerne la connexion à l'hôte via le connecteur M.2. Ce connecteur est couramment utilisé dans les ordinateurs modernes pour connecter des composants tels que des disques SSD, des cartes réseau sans fil et d'autres périphériques d'extension. Il est notamment présent sur certaines cartes mères d'ordinateurs. La carte réseau EM9190 utilise un connecteur M.2 Type 3042-S3-B, conforme à la spécification PCI Express M.2 Revision 3.0, Version 1.2. Ce type de connecteur est destiné aux modules WWAN et supporte les interfaces PCIe et USB 3.1.
 
-Il faut savoir que dans le cas d'une transmission mmWave, il est **impossible** d'utiliser l'interface USB. Donc dans le cadre de notre projet, pour pouvoir utiliser l'EM9190 avec un ordinateur et/ou une carte raspberry il faut un slot **M.2 Type B** prenant en charge **WWAN** et l'interface **PCIe**. Si l'hôte n'a pas de port M.2 compatible, on peut utiliser un **adaptateur M.2 vers PCIe** prenant en charge les modules WWAN, ce qui est rare.
+Il est important de noter que, dans le cadre d'une transmission mmWave, l'interface USB ne peut pas être utilisée. Ainsi, pour intégrer l'EM9190 avec un ordinateur ou une carte Raspberry, il est nécessaire d'avoir un port M.2 Type B compatible avec WWAN et l'interface PCIe. Si l'hôte ne dispose pas d'un tel port, il est possible d'utiliser un adaptateur M.2 vers PCIe compatible avec les modules WWAN, bien que ces adaptateurs soient relativement rares.
+
+Lors de nos recherches pour trouver une carte d'extension compatible avec le Raspberry Pi 4B (ou même 5), nous n'avons pas trouvé de modèle réunissant toutes les connexions et compatibilités nécessaires. Malgré tout, nous avons quelques pistes : lien
+
+#### **Connecteurs MHF7S**
+
+A rajouter : Recherche mais compatible jusqu'à 15 GHz
+
+#### **Connexion du hardware**
+
+A rajouter : De manière général difficile de trouver un moyen de connecter les différents éléments de hardware entre eux, difficulté de trouver des adaptateur et de la compatibilité des éléments entre eux. Et enfin de pouvoir les trouver et les commanders à temps.
 
 ## **Annexes**
 
