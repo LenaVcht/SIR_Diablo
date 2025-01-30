@@ -23,7 +23,7 @@ Cette partie est juste une agrégation de nos recherches menées sur la connexio
 ### **Modem EM9190**
 
 <p align="left">
-  Pour établir une connexion en mmWaves, nous utilisons un modem 5G EM9190 de la marque Sierra Wireless (le manuel de l'EM9190 se trouve dans le dossier "manuel"). 
+  Pour établir une connexion en mmWaves, nous utilisons un modem 5G EM9190 de la marque Sierra Wireless (le manuel de l'EM9190 se trouve dans le dossier "manuels"). 
   Ce module prend en charge plusieurs types de transmission, mais nous nous concentrerons uniquement sur la partie relative à la transmission mmWave.
 
 Le tableau ci-dessous répertorie les bandes de fréquences prises en charge par le module Sierra Wireless. Pour une transmission mmWave, les bandes prises en charges sont n257, n258, n260 et n261. On a également les   capacités DL(reception)/UL(émission).
@@ -58,7 +58,7 @@ Le modem dispose de plusieurs types de connecteurs, chacun ayant une utilité sp
 
 Le modem permet de connecter jusqu'à 4 modules d'antennes mmWaves, chaque module étant relié par 2 câbles : l’un à une entrée IFH (Horizontale) et l’autre à une entrée IFV (Verticale). Les modules d'antennes compatibles avec le modem EM9190 sont les modèles QTM525 et QTM527, la principale différence résidant dans leur puissance d'émission. L'utilisation de 4 antennes n'est pas obligatoire, notamment avec le module QTM525, mais il est impératif de respecter l’assignation correcte des ports mmWave dans chaque configuration (voir Annexe 1).
 
-Dans le cadre d'une expérimentation simplifiée, nous proposons de commencer avec un seul module QTM525. Par conséquent, cette section se concentrera uniquement sur l’utilisation du module QTM525 (le manuel du QTM525 est lui aussi disponible dans le dossier "manuel").
+Dans le cadre d'une expérimentation simplifiée, nous proposons de commencer avec un seul module QTM525. Par conséquent, cette section se concentrera uniquement sur l’utilisation du module QTM525 (le manuel du QTM525 est lui aussi disponible dans le dossier "manuels").
 <p align="center">
   <img src="images/QTM525.jpg" width="300"> <img src="images/QTM525schema.PNG" width="500">
 </p>
@@ -74,13 +74,15 @@ On peut observer ci-dessus la face avant du module d'antenne QTM525, comprenant 
   <img src="images/QTM525Pin.PNG" width="520"> <img src="images/Pin2.PNG" width="400">
 </p>
 
-La connexion des broches est assurée par le module IPEX MPN 20865-010E-01, monté sur le QTM525. Ce module est composé de deux parties, la première est intégrée au QTM525, tandis que la seconde est un élément distinct permettant de fixer les fils sur les broches en s’emboîtant sur la première partie (les manuels du module sont disponibles dans le dossier "manuel").
+La connexion des broches est assurée par le module IPEX MPN 20865-010E-01, monté sur le QTM525. Ce module est composé de deux parties, la première est intégrée au QTM525, tandis que la seconde est un élément distinct permettant de fixer les fils sur les broches en s’emboîtant sur la première partie (les manuels du module sont disponibles dans le dossier "manuels").
 
 <p align="center">
   <img src="images/Modulebroche.PNG" width="300">
 </p>
 
 ### **Mise en place**
+
+!! Changer et mettre l'autre image plus parlante !!
 
 Voici un exemple de mise en place d'un système de transmission en mmWaves sur un ordinateur.
 
@@ -95,21 +97,23 @@ Voici un exemple de mise en place d'un système de transmission en mmWaves sur u
 
 ### **Difficultés rencontrées**
 
+Maintenant que nous savons comment tout mettre en place, il faut trouver le hardware compatible, c'est justement cela qui nous a posé de trop grandes difficultés.
+
 #### **Connexion à l'hôte**
 
-La première difficulté rencontrée concerne la connexion à l'hôte via le connecteur M.2. Ce connecteur est couramment utilisé dans les ordinateurs modernes pour connecter des composants tels que des disques SSD, des cartes réseau sans fil et d'autres périphériques d'extension. Il est notamment présent sur certaines cartes mères d'ordinateurs. La carte réseau EM9190 utilise un connecteur M.2 Type 3042-S3-B, conforme à la spécification PCI Express M.2 Revision 3.0, Version 1.2. Ce type de connecteur est destiné aux modules WWAN et supporte les interfaces PCIe et USB 3.1.
+La connexion à l'hôte se réalise via un connecteur M.2, ce connecteur est couramment utilisé dans les ordinateurs modernes pour connecter des composants tels que des disques SSD, des cartes réseau sans fil et d'autres périphériques d'extension. La carte réseau EM9190 utilise un connecteur **M.2 3042-S3 Type B** spécéfique aux modules **WWAN** et supporte les interfaces **PCIe et USB3**.
 
-Il est important de noter que, dans le cadre d'une transmission mmWave, l'interface USB ne peut pas être utilisée. Ainsi, pour intégrer l'EM9190 avec un ordinateur ou une carte Raspberry, il est nécessaire d'avoir un port M.2 Type B compatible avec WWAN et l'interface PCIe. Si l'hôte ne dispose pas d'un tel port, il est possible d'utiliser un adaptateur M.2 vers PCIe compatible avec les modules WWAN, bien que ces adaptateurs soient relativement rares.
+Ainsi, pour intégrer l'EM9190 avec un ordinateur ou une carte Raspberry, il est nécessaire d'avoir un port M.2 Type B, compatible avec les interfaces PCIe ou USB et compatible également avec une utilisation réseau WWAN.
 
-Lors de nos recherches pour trouver une carte d'extension compatible avec le Raspberry Pi 4B (ou même 5), nous n'avons pas trouvé de modèle réunissant toutes les connexions et compatibilités nécessaires. Malgré tout, nous avons quelques pistes : lien
+Lors de nos recherches pour trouver une carte d'extension compatible avec le Raspberry Pi 4B, **nous n'avons pas trouvé de modèles compatibles**. Malgré tout, nous avons quelques pistes.
+
+La première piste est le manuel **dev kit de Sierra Wireless** (disponible dans le dossier "manuels). Mais le manuel ne fait pas mention des modules d'antennes spécifiques à l'utilisation des mmWaves. Il reste alors encore la question de savoir comment alimenter l'antenne en 3.7V et comment connecter les broches QTM_PON et QTM_IO_1.9V au connecteur M.2.
+
+Il existe aussi des adaptateurs **M.2 Type B vers USB3**, spécifique pour la transmition 3G/4G/5G, mais il reste encore la même question de l'alimentation et de la connection des broches. Voici le lien vers l'adaptateur : https://www.newegg.com/p/3C6-01NE-000M2
 
 #### **Connecteurs MHF7S**
 
 A rajouter : Recherche mais compatible jusqu'à 15 GHz
-
-#### **Connexion du hardware**
-
-A rajouter : De manière général difficile de trouver un moyen de connecter les différents éléments de hardware entre eux, difficulté de trouver des adaptateur et de la compatibilité des éléments entre eux. Et enfin de pouvoir les trouver et les commanders à temps.
 
 ## **Annexes**
 
