@@ -91,6 +91,8 @@ ssh diablo@<IP_DU_RASPBERRY>
 ```
 > Le mot de passe est : diablo123
 
+A rajouter : aperçu final du terminal
+
 ## **Connexion VNC**
 
 Il est également possible de faire un déport d'affichage complet grâce à une connexion VNC. Ainsi, on a accès au bureau complet du Raspberry comme si on y était connecté en HDMI. Pour établir cette connexion, nous avons utilisé TigerVNC. Mais le problème était que c'était beaucoup trop lent. Charger une page internet prenait plusieurs minutes, donc nous avons abandonné cette solution.
