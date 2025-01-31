@@ -15,7 +15,7 @@
 
 ## **Connexion HDMI**
 
-La méthode la plus simple pour se connecter au robot est d'utiliser un écran, un câble HDMI to mini HDMI et souris, clavier. Ensuite il faut juste connecter tous les périphériques au Raspberry Pi et on a accès au système d'exploitaton du robot. Cette méthode est utile pour pouvoir mettre oeuvre les autres types de connexion sans fil.
+La méthode la plus simple pour se connecter au robot est d'utiliser un écran, un câble HDMI to mini HDMI et souris, clavier. Ensuite il faut juste connecter tous les périphériques au Raspberry Pi et on a accès au système d'exploitaton du robot. Cette méthode est utile pour pouvoir mettre en oeuvre les autres types de connexion sans fil.
 
 ## **Connexion SSH**
 
