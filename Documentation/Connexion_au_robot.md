@@ -23,12 +23,12 @@ Ensuite on peut ouvrir un terminal du robot à distance, sur un autre ordinateur
 
 Tout d'abord, il faut **vérifier que SSH est bien activé** sur le Raspberry et l'ordinateur.
 
-Sur windows, SSH est généralement activé par défault. Pour vérifier :
+Sur **windows**, SSH est généralement activé par défault. Pour vérifier :
 ```powershell
 ssh
 ```
 
-Sur Linux :
+Sur **linux** :
 ```bash
 sudo systemctl status ssh
 ```
