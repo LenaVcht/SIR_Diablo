@@ -58,13 +58,7 @@ Mais ce qui nous intéresse réellement, c'est bien sûr de pouvoir contrôler l
 
 Mais ces méthodes différentes nécessitent la même préparation pour fonctionner dans notre environnement de travail.
 
-Tout d'abord, une fois que le robot est connecté au même réseau (Wi-Fi) que nous, il nous faut son adresse IP. Dans notre exemple, elle se présente sous cette forme : **10.56.12.225**. 
-On peut alors s'y conecter grâce à la commande suivante :
-
-```bash
-ssh diablo@10.56.12.225
-```
-*On nous demande alors un mot de passe qui dans le cas de cette connexion est **diablo123**.*
+Tout d'abord, on se connecte au robot en ssh. (Pour plus de détails, vous pouvez lire la partie **Connexion SSH** de la docmentation)
 
 Une fois connectés, notre terminal devient un terminal du robot. Il est maintenant possible d'accéder à tous les packages et noeuds ros2 installés sur le robot depuis ce même terminal.
 
@@ -318,6 +312,22 @@ Ainsi, le script capture les touches pressées sur le clavier, les lit, update l
 - Ctrl+C: quitter.
 
 ### **Récupération d'informations depuis le robot**
+
+S'il est possible de publier sur des topics pour envoyer des ordres au robot, on peut également lire le contenu de topics sur lesquels il publie des informations. La liste des topics actuellement utilisés sur le robot peut s'obtenir avec la commande suivante : 
+
+```bash
+ros2 topic list
+```
+
+Ainsi, on peut accéder tout de suite à la liste de tous les topics sur lesquels des messages sont publiés en ce moment, ou qui sont écoutés par le robot. On devrait normalement voir le topic **/diablo/MotionCmd** que l'on a utilisé précédemment, mais qui ne nous intéresse pas dans le cadre de récupération d'informations du robot. Parmi les autres topics présent, on peut en observer plusieurs faisant partie d'un dossier **sensor** : ce sont ceux qui vont nous permettre d'obtenir des messages provenant du robot. Voici la liste des topics que l'on peut observer :
+
+- **/diablo/sensor/Battery**
+- **/diablo/sensor/Body_state**
+- **/diablo/sensor/Imu**
+- **/diablo/sensor/ImuEuler**
+- **/diablo/sensor/Motors**
+
+Il est alors possible d'accéder à nombre d'informations qui peuvent vous intéresser. 
 
 ## **Bibliographie**
 
