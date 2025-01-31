@@ -88,11 +88,11 @@ Le plus compliqué est de connecter le robot à eduroam, car il est sous linux. 
 2. Execute le fichier python et rentre l'identifiant (première lettre du prénom + nom + @insa-lyon.fr) et le mdp de connexion.
 4. Connecte le robot à eduroam.
 
-Une fois que le robot et l'ordinateur est connecté, récupère l'adresse ip :
+5. Une fois que le robot et l'ordinateur est connecté, récupère l'adresse ip :
 ```bash
 ifconfig
 ```
-Et execute la commande :
+6. Et execute la commande :
 ```bash/powershell
 ssh diablo@<IP_DU_RASPBERRY>
 ```
