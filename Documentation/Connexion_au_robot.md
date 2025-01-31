@@ -111,7 +111,7 @@ Il existe aussi des adaptateurs **M.2 Type B vers USB3**, spécifique pour la tr
 
 #### **Connecteurs MHF7S**
 
-A rajouter : Recherche mais compatible jusqu'à 15 GHz
+
 
 ## **Annexes**
 
