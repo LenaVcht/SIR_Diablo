@@ -97,7 +97,7 @@ Il est également possible de faire un déport d'affichage complet grâce à une
 
 ## **Connexion mmWaves**
 
-Cette partie est juste une agrégation de nos recherches menées sur la connexion en mmWave et comment il serait possible de la mettre en oeuvre. Jamais nous n'avons pu experimenter cette connexion avec du vrai hardware, il est donc possible que la solution présentée ne soit pas fonctionnelle. Cette solution s'appuie sur les manuels officiels que l'on a pu trouver pendant nos recherches et ouvre la voie vers de futurs experimentations.
+Cette partie est juste une agrégation de nos recherches menées sur la connexion en mmWave et comment il serait possible de la mettre en oeuvre. Jamais nous n'avons pu experimenter cette connexion avec du vrai hardware, il est donc possible que la solution présentée ne soit pas fonctionnelle, d'ailleurs certains de nos problèmes sont restés sans réponses. Cette documentation s'appuie sur les manuels officiels et ouvre la voie vers de futurs experimentations potentielles.
 
 ### **Modem EM9190**
 
