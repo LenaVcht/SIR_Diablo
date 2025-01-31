@@ -28,7 +28,7 @@ Sur **windows**, SSH est généralement activé par défault. Pour vérifier :
 ssh
 ```
 
-Sur **linux**, il faut executer la commande :
+Sur **linux** ou sur le Raspberry, il faut executer la commande :
 ```bash
 sudo systemctl status ssh
 ```
@@ -36,7 +36,7 @@ Si il n'y a pas d'erreur, c'est que ssh est activé, sinon il faut **activer ssh
 
 **Méthode 1 :**
 
-Sur le Raspberry Pi, il faut ouvrir un terminal et exécuter :
+Sur le Raspberry Pi, on  ouvre un terminal et exécute :
 ```bash
 sudo raspi-config
 ```
