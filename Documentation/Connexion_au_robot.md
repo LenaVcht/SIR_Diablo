@@ -15,11 +15,11 @@
 
 ## **Connexion HDMI**
 
-La méthode la plus simple pour se connecter au robot est d'utiliser un écran, un câble HDMI to mini HDMI et souris, clavier. Ensuite il faut juste connecter tous les périphériques au Raspberry Pi et on a accès au système d'exploitaton du robot. Cette méthode est utile pour pouvoir mettre en oeuvre les autres types de connexion sans fil.
+La méthode la plus simple pour se connecter au robot est d'utiliser un écran, un câble HDMI to mini HDMI, une souris et un clavier. Ensuite il faut juste connecter tous les périphériques au Raspberry Pi et on a accès au système d'exploitaton du robot comme sur un ordinateur classique. Cette méthode est utile pour pouvoir mettre en place les autres types de connexion sans fil.
 
 ## **Connexion SSH**
 
-On peut également ouvrir un terminal à distance, sur un autre ordinateur, en établissant une connexion SSH.
+La connexion SSH permet d'ouvrir un terminal du robot depuis un autre ordinateur.
 
 Tout d'abord, il faut **vérifier que SSH est bien activé** sur le Raspberry et l'ordinateur.
 
@@ -28,34 +28,34 @@ Sur **windows**, SSH est généralement activé par défault. Pour vérifier :
 ssh
 ```
 
-Sur **linux** :
+Sur **linux**, il faut executer la commande :
 ```bash
 sudo systemctl status ssh
 ```
-Si il n'y a pas d'erreur alors c'est que ssh est activé, sinon il faut **activer ssh**. Pour cela il existe plusieurs méthodes :
+Si il n'y a pas d'erreur, c'est que ssh est activé, sinon il faut **activer ssh**. Pour cela il existe plusieurs méthodes :
 
 **Méthode 1 :**
 
-Sur le Raspberry Pi, ouvre un terminal et exécute :
+Sur le Raspberry Pi, il faut ouvrir un terminal et exécuter :
 ```bash
 sudo raspi-config
 ```
 Puis:
-1. Va dans Interface Options → SSH.
-2. Sélectionne Yes pour activer SSH.
-3. Quitte et redémarre le Raspberry Pi :
+1. Aller dans Interface Options → SSH.
+2. Sélectionner Yes pour activer SSH.
+3. Quitter et redémarrer le Raspberry Pi :
 ```bash
 sudo reboot
 ```
 
 **Méthode 2 :**
 
-Si raspi-config n'est pas disponible, active SSH en créant le fichier ssh manuellement :
+Si raspi-config n'est pas disponible, il faut activer SSH manuellement :
 ```bash
 sudo systemctl enable ssh
 sudo systemctl start ssh
 ```
-Puis vérifie que ssh est bien activé :
+Puis on vérifie que ssh est bien activé :
 ```bash
 sudo systemctl status ssh
 ```
@@ -69,30 +69,21 @@ Mais avant cela, il faut que l'ordinateur et le Raspberry soient connecté au m�
 
 ### **Ethernet**
 
-1. Connecte le robot et l'ordinateur avec un câble ethernet.
-2. Récupère l'adresse ip du Raspberry en executant :
-```bash
-ifconfig
-```
-
-5. Execute ensuite la commande :
-```bash/powershell
-ssh diablo@<IP_DU_RASPBERRY>
-```
-> Le mot de passe est : diablo123
+En ethernet, c'est très simple, il suffit de connecte le robot et l'ordinateur avec un câble ethernet.
 
 ### **Wifi (eduroam)**
 
-Le plus compliqué est de connecter le robot à eduroam, car il est sous linux. Pour cela :
-1. Télécharge l'installeur python sur ce lien : https://cat.eduroam.org/
-2. Execute le fichier python et rentre l'identifiant (première lettre du prénom + nom + @insa-lyon.fr) et le mdp de connexion.
+En wifi c'est plus compliqué, car le robot est sous linux. Il faut :
+1. Télécharger l'installeur python sur ce lien : https://cat.eduroam.org/
+2. Executer le fichier python et rentrer l'identifiant (première lettre du prénom + nom + @insa-lyon.fr) et le mdp de connexion.
+3. Rajouter : les paramètres nécesssaire de la connexion (Authentification ...)
 4. Connecte le robot à eduroam.
 
-5. Une fois que le robot et l'ordinateur est connecté, récupère l'adresse ip :
+Une fois que le robot et l'ordinateur connectés, que cela soit en wifi ou ethernet, il faut récupérer l'adresse ip. Pour cela on execute :
 ```bash
 ifconfig
 ```
-6. Et execute la commande :
+6. Enfin, pour démarrer la connexion SSH, on execute la commande :
 ```bash/powershell
 ssh diablo@<IP_DU_RASPBERRY>
 ```
