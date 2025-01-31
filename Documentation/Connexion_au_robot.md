@@ -12,7 +12,64 @@
 - [Annexes](#Annexes)
 - [Bibliographie](#Bibliographie)
 
+## **Connexion HDMI**
+
+La méthode la plus simple pour se connecter au robot est d'utiliser un écran, un câble HDMI to mini HDMI et souris, clavier. Ensuite il faut juste connecter tous les périphériques au Raspberry Pi et on a accès au système d'exploitaton du robot. Cette méthode est utile pour pouvoir mettre oeuvre les autres types de connexion sans fil.
+
 ## **Connexion SSH**
+
+Ensuite on peut ouvrir un terminal du robot à distance, sur un autre ordinateur, en établissant une connexion SSH.
+
+Tout d'abord, il faut vérifier que SSH est bien activé sur le Raspberry et l'ordinateur.
+
+Sur windows, SSH est généralement activé par défault. Pour vérifier :
+```powershell
+ssh
+```
+
+Sur Linux :
+```bash
+sudo systemctl status ssh
+```
+Si il n'y a pas d'erreur alors c'est que ssh est activé, sinon il faut activer ssh. Pour cela il existe plusieurs méthodes :
+
+**Méthode 1 :**
+
+Sur le Raspberry Pi, ouvre un terminal et exécute :
+```bash
+sudo raspi-config
+```
+Puis:
+1. Va dans Interface Options → SSH.
+2. Sélectionne Yes pour activer SSH.
+3. Quitte et redémarre le Raspberry Pi :
+```bash
+sudo reboot
+```
+Si raspi-config n'est pas disponible, active SSH en créant le fichier ssh manuellement :
+```bash
+sudo systemctl enable ssh
+sudo systemctl start ssh
+```
+Puis vérifie que ssh est bien activé :
+```bash
+sudo systemctl status ssh
+```
+
+Une fois activé, tu peux te connecter en SSH avec un ordinateur, il suffit d'ouvrir un terminal est exécuter :
+```bash
+ssh pi@<IP_DU_RASPBERRY>
+```
+
+Tout d'abord il faut que le robot et l'ordinateur soient connectés sur le même réseau via ethernet ou wifi.
+
+### **Ethernet**
+
+
+
+### **Wifi (eduroam)**
+
+
 
 ## **Connexion VNC**
 
