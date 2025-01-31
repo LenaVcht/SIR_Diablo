@@ -96,11 +96,11 @@ class KeyboardControlNode(Node):
 
                 # Publication du message de commande vers le robot
                 self.publisher_.publish(msg)
-                time.sleep(0.5) #Le robot bouge pendant 0.5 secondes
+                time.sleep(0.1) #Le robot bouge pendant 0.1 secondes
                 msg.value.forward = 0.0
                 msg.value.left = 0.0
                 self.publisher_.publish(msg)
-                self.get_logger().info("Arrêt automatique après 0.5 secondes")
+                self.get_logger().info("Arrêt automatique après 0.1 secondes")
 
 
         except KeyboardInterrupt:
