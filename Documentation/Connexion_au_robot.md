@@ -19,7 +19,7 @@ La méthode la plus simple pour se connecter au robot est d'utiliser un écran, 
 
 ## **Connexion SSH**
 
-Ensuite on peut ouvrir un terminal du robot à distance, sur un autre ordinateur, en établissant une connexion SSH.
+On peut également ouvrir un terminal du robot à distance, sur un autre ordinateur, en établissant une connexion SSH.
 
 Tout d'abord, il faut **vérifier que SSH est bien activé** sur le Raspberry et l'ordinateur.
 
