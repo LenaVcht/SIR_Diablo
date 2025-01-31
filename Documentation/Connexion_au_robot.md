@@ -60,6 +60,7 @@ Puis vérifie que ssh est bien activé :
 sudo systemctl status ssh
 ```
 
+
 Une fois activé, on peut se **connecter en SSH** avec un ordinateur, il suffit d'ouvrir un terminal est exécuter :
 ```bash
 ssh diablo@<IP_DU_RASPBERRY>
