@@ -79,7 +79,7 @@ ssh diablo@<IP_DU_RASPBERRY>
 ### **Wifi (eduroam)**
 
 Le plus compliqué est de connecter le robot à eduroam, car il est sous linux. Pour cela,
-1. Télécharge l'instaleur python sur ce lien : https://cat.eduroam.org/
+1. Télécharge l'installeur python sur ce lien : https://cat.eduroam.org/
 2. Execute le fichier python et rentre l'identifiant (id@insa-lyon.fr) et le mdp de connexion.
 3. Connecte le robot à eduroam.
 
