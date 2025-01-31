@@ -52,13 +52,14 @@ Le modem dispose de plusieurs types de connecteurs, chacun ayant une utilité sp
   
 - **1 connecteur M.2** : interface utilisée pour connecter le périphérique à un hôte, comme un ordinateur (voir Annexe 1).
 - **4 connecteurs RF MHF4** : dédiés à la transmission via LTE/Sub-6/GNSS, désignés comme suit : MAIN, MIMO1, AUX/GNSS L1, MIMO2/GNSS L5.
-- **8 connecteurs MHF7S** : destinés à la transmission via mmWaves, identifiés par les ports suivants : IFH1, IFV1, IFH2, IFV2, IFH3, IFV3, IFH4, IFV4.
+- **8 connecteurs IF** : destinés à la transmission via mmWaves, identifiés par les ports suivants : IFH1, IFV1, IFH2, IFV2, IFH3, IFV3, IFH4, IFV4.
 
 ### **Module d'antenne QTM525**
 
 Le modem permet de connecter jusqu'à 4 modules d'antennes mmWaves, chaque module étant relié par 2 câbles : l’un à une entrée IFH (Horizontale) et l’autre à une entrée IFV (Verticale). Les modules d'antennes compatibles avec le modem EM9190 sont les modèles QTM525 et QTM527, la principale différence résidant dans leur puissance d'émission. L'utilisation de 4 antennes n'est pas obligatoire, notamment avec le module QTM525, mais il est impératif de respecter l’assignation correcte des ports mmWave dans chaque configuration (voir Annexe 1).
 
 Dans le cadre d'une expérimentation simplifiée, nous proposons de commencer avec un seul module QTM525. Par conséquent, cette section se concentrera uniquement sur l’utilisation du module QTM525 (le manuel du QTM525 est lui aussi disponible dans le dossier "manuels").
+
 <p align="center">
   <img src="images/QTM525.jpg" width="300"> <img src="images/QTM525schema.PNG" width="500">
 </p>
@@ -66,7 +67,7 @@ Dans le cadre d'une expérimentation simplifiée, nous proposons de commencer av
 Il existe deux variantes, QTM525-2 et QTM525-5, mais ça n'a peut d'incidence car les deux peuvent oppérer sur la bande n258 (pour plus de caractéristiques sur le module d'antenne voir Annexe 2).
 
 On peut observer ci-dessus la face avant du module d'antenne QTM525, comprenant le connecteur et ses 10 broches. Pour notre projet, seules 5 broches sont nécessaires :
-- Les deux premières broches, IF1 et IF2, seront connectées aux connecteurs IF du modem à l'aide de câbles adaptés.
+- Les deux premières broches, IF1 et IF2, seront connectées aux connecteurs IF du modem à l'aide de câbles coaxials MHF7S.
 - Deux autres broches, VPH et VDD, seront utilisées pour l'alimentation.
 - Enfin, la broche PON servira à activer un composant du module d'antenne.
 
@@ -88,22 +89,24 @@ Voici la mise en place d'un système de transmission en mmWaves avec le module E
   <img src="images/Mise en place.PNG" width="600">
 </p>
 
-- Les connecteurs coaxials IFV et IFH sont reliés au connecteur IF du modem EM9190.
+- Les connecteurs coaxials MHF7S sont reliés au connecteur IF du modem EM9190.
 - Le premier connecteur d'alimentation VDC power est raccordé à une tension de 3,7 volts.
-- Le deuxième connecteur d'alimentation QTM_IO_1.9V est connecté au modem EM9190, au niveau du port M.2 (en vert).
-- Chaque connecteur QTMx_PON est également relié au modem EM9190, au niveau du port M.2 (en rose).
+- Le deuxième connecteur d'alimentation QTM_IO_1.9V est connecté au modem EM9190, au niveau du port M.2.
+- Chaque connecteur QTMx_PON est également relié au modem EM9190, au niveau du port M.2.
 
 ### **Difficultés rencontrées**
 
-Maintenant que nous savons comment tout mettre en place, il faut trouver le hardware compatible, c'est justement cela qui nous a posé de trop grandes difficultés.
+Maintenant que nous savons comment tout mettre en place, il faut trouver le hardware compatible, c'est justement cela qui nous a posé des difficultés.
 
 #### **Connexion à l'hôte**
 
-La connexion à l'hôte se réalise via un connecteur M.2, ce connecteur est couramment utilisé dans les ordinateurs modernes pour connecter des composants tels que des disques SSD, des cartes réseau sans fil et d'autres périphériques d'extension. La carte réseau EM9190 utilise un connecteur **M.2 3042-S3 Type B** spécéfique aux modules **WWAN** et supporte les interfaces **PCIe et USB3**.
+Le premier problème concerne la connexion à l'hôte. Elle se réalise via un connecteur M.2, ce connecteur est couramment utilisé dans les ordinateurs modernes pour connecter des composants tels que des disques SSD, des cartes réseau sans fil et d'autres périphériques d'extension. La carte réseau EM9190 utilise un connecteur **M.2 3042-S3 Type B** spécéfique aux modules **WWAN** et supporte les interfaces **PCIe et USB3**.
 
-Ainsi, pour intégrer l'EM9190 avec un ordinateur ou une carte Raspberry, il est nécessaire d'avoir un port M.2 Type B, compatible avec les interfaces PCIe ou USB et compatible également avec une utilisation réseau WWAN.
+Ainsi, pour intégrer l'EM9190 avec un ordinateur ou une carte Raspberry, il est nécessaire d'avoir un port **M.2 Type B**, compatible avec les interfaces **PCIe ou USB** et compatible également avec une utilisation réseau **WWAN**.
 
-Lors de nos recherches pour trouver une carte d'extension compatible avec le Raspberry Pi 4B, **nous n'avons pas trouvé de modèles compatibles**. Malgré tout, nous avons quelques pistes.
+Lors de nos recherches pour trouver une carte d'extension compatible avec le Raspberry Pi 4B, **nous n'avons pas trouvé de modèles compatibles**.
+
+Malgré tout, nous avons quelques pistes :
 
 La première piste est le manuel **dev kit de Sierra Wireless** (disponible dans le dossier "manuels). Mais le manuel ne fait pas mention des modules d'antennes spécifiques à l'utilisation des mmWaves. Il reste alors encore la question de savoir comment alimenter l'antenne en 3.7V et comment connecter les broches QTM_PON et QTM_IO_1.9V au connecteur M.2.
 
@@ -111,7 +114,7 @@ Il existe aussi des adaptateurs **M.2 Type B vers USB3**, spécifique pour la tr
 
 #### **Connecteurs MHF7S**
 
-
+Le deuxième problème concerne les connecteurs MHF7S nécessaire à la connexion du module d'antenne. Le manuel préconise d'utiliser des câbles MHF7S I-PEX, mais le constructeur ne fait que des câbles coaxials supportant maximum 15GHz, ce qui est insufisant pour l'utilisation de la bande 26GHz.
 
 ## **Annexes**
 
