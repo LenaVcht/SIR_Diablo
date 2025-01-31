@@ -60,7 +60,6 @@ Puis vérifie que ssh est bien activé :
 sudo systemctl status ssh
 ```
 
-
 Une fois activé, on peut se **connecter en SSH** avec un ordinateur, il suffit d'ouvrir un terminal est exécuter :
 ```bash
 ssh diablo@<IP_DU_RASPBERRY>
@@ -70,7 +69,13 @@ Mais avant cela, il faut que l'ordinateur et le Raspberry soient connecté au m�
 
 ### **Ethernet**
 
-Connecte le robot et l'ordinateur avec un câble ethernet. Ensuite, récupère l'adresse ip du Raspberry, et execute la commande :
+1. Connecte le robot et l'ordinateur avec un câble ethernet.
+2. Récupère l'adresse ip du Raspberry en executant :
+```bash
+ifconfig
+```
+
+5. Execute ensuite la commande :
 ```bash/powershell
 ssh diablo@<IP_DU_RASPBERRY>
 ```
