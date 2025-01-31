@@ -74,7 +74,7 @@ Connecte le robot et l'ordinateur avec un câble ethernet. Ensuite, récupère l
 ```bash/powershell
 ssh diablo@<IP_DU_RASPBERRY>
 ```
-> **Note :** Le mot de passe est : diablo123
+> Le mot de passe est : diablo123
 
 ### **Wifi (eduroam)**
 
@@ -87,7 +87,7 @@ Une fois que le robot et l'ordinateur est connecté, il suffit d'executer la com
 ```bash/powershell
 ssh diablo@<IP_DU_RASPBERRY>
 ```
-> **Note :** Le mot de passe est : diablo123
+> Le mot de passe est : diablo123
 
 ## **Connexion VNC**
 
