@@ -28,11 +28,11 @@ Sur **windows**, SSH est généralement activé par défault. Pour vérifier :
 ssh
 ```
 
-Sur **linux** ou sur le Raspberry, il faut executer la commande :
+Sur **linux** (ce qui est le cas du Raspberry), il faut executer la commande :
 ```bash
 sudo systemctl status ssh
 ```
-Si il n'y a pas d'erreur, c'est que ssh est activé, sinon il faut **activer ssh**. Pour cela il existe plusieurs méthodes :
+Si il n'y a pas d'erreur, c'est que SSH est activé, sinon il faut **activer SSH**. Pour cela il existe plusieurs méthodes :
 
 **Méthode 1 :**
 
@@ -74,22 +74,26 @@ En ethernet, c'est très simple, il suffit de connecte le robot et l'ordinateur 
 ### **Wifi (eduroam)**
 
 En wifi c'est plus compliqué, car le robot est sous linux. Il faut :
-1. Télécharger l'installeur python sur ce lien : https://cat.eduroam.org/
+1. Télécharger l'installeur eduroam python sur ce lien : https://cat.eduroam.org/
 2. Executer le fichier python et rentrer l'identifiant (première lettre du prénom + nom + @insa-lyon.fr) et le mdp de connexion.
 3. Rajouter : les paramètres nécesssaire de la connexion (Authentification ...)
 4. Connecte le robot à eduroam.
 
-Une fois que le robot et l'ordinateur connectés, que cela soit en wifi ou ethernet, il faut récupérer l'adresse ip. Pour cela on execute :
+Une fois le robot et l'ordinateur connectés, que cela soit en wifi ou ethernet, il faut récupérer l'adresse ip. Pour cela on execute :
 ```bash
 ifconfig
 ```
-6. Enfin, pour démarrer la connexion SSH, on execute la commande :
+A rajouter : le retour de la commande et ou ce trouvent les adresses ip
+
+Enfin, pour démarrer la connexion SSH, on execute la commande :
 ```bash/powershell
 ssh diablo@<IP_DU_RASPBERRY>
 ```
 > Le mot de passe est : diablo123
 
 ## **Connexion VNC**
+
+Il est également possible de faire un déport d'affichage complet grâce à VNC. Ainsi, on a accès au bureau complet du Raspberry comme si on y était connecté en HDMI. Pour établir cette connexion, nous avons utilisé TigerVNC. Mais le problème était que c'était beaucoup trop lent. Charger une page internet prenait plusieurs minutes, donc nous avons abandonné cette solution.
 
 ## **Connexion mmWaves**
 
