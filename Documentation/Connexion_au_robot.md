@@ -66,7 +66,7 @@ Une fois activé, on peut se **connecter en SSH** avec un ordinateur, il suffit 
 ssh diablo@<IP_DU_RASPBERRY>
 ```
 
-Ensuite, il faut que l'ordinateur et le Raspberry soient connecté au même réseau, soit par ethernet, soit via wifi.
+Mais avant cela, il faut que l'ordinateur et le Raspberry soient connecté au même réseau, soit par ethernet, soit via wifi.
 
 ### **Ethernet**
 
