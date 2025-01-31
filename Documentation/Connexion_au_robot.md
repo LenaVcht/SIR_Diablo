@@ -82,18 +82,16 @@ La connexion des broches est assurée par le module IPEX MPN 20865-010E-01, mont
 
 ### **Mise en place**
 
-!! Changer et mettre l'autre image plus parlante !!
-
-Voici un exemple de mise en place d'un système de transmission en mmWaves sur un ordinateur.
+Voici la mise en place d'un système de transmission en mmWaves avec le module EM9190.
 
 <p align="center">
   <img src="images/Mise en place.PNG" width="600">
 </p>
 
-- Les connecteurs IFV et IFH sont reliés au connecteur IF du modem EM9190 (en bleu).
-- Le premier connecteur d'alimentation (VPH) est raccordé à une tension de 3,7 volts (en rouge).
-- Le deuxième connecteur d'alimentation (VDD) est connecté au modem EM9190, au niveau du port M.2 (en vert).
-- Chaque connecteur PON est également relié au modem EM9190, au niveau du port M.2 (en rose).
+- Les connecteurs coaxials IFV et IFH sont reliés au connecteur IF du modem EM9190.
+- Le premier connecteur d'alimentation VDC power est raccordé à une tension de 3,7 volts.
+- Le deuxième connecteur d'alimentation QTM_IO_1.9V est connecté au modem EM9190, au niveau du port M.2 (en vert).
+- Chaque connecteur QTMx_PON est également relié au modem EM9190, au niveau du port M.2 (en rose).
 
 ### **Difficultés rencontrées**
 
