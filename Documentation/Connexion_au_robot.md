@@ -6,6 +6,7 @@
 
 ## **Sommaire**
 
+- [Connexion HDMI](#Connexion-HDMI)
 - [Connexion SSH](#Connexion-SSH)
 - [Connexion VNC](#Connexion-VNC)
 - [Connexion mmWaves](#Connexion-mmWaves)
