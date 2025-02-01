@@ -9,7 +9,7 @@
 La technologie mmWave sur les fréquences 26 GHz à été beaucoup mise en avant lors de la création des standards 5G, notamment pour les débits importants qu’elle permet d’atteindre. Cependant, son utilisation actuelle est encore très limitée, surtout en Europe. Même le
 nombre de licences accordées pour opérer dans la bande de 26 GHz reste faible.
 
-La Cité des Sciences et de l’Industrie bénéficie d’une telle licence, pour des buts dedémonstration et de vulgarisation du sujet envers le public. C'est pour cela que notre projet consiste à faire une démonstration d'un robot Diablo équipé de la technologie mmWave. La première étape est d’équiper le robot avec une carte modem mmWave externe, la configurer et la tester.
+La Cité des Sciences et de l’Industrie bénéficie d’une telle licence, pour des buts de démonstration et de vulgarisation du sujet envers le public. C'est pour cela que notre projet consiste à faire une démonstration d'un robot Diablo équipé de la technologie mmWave. La première étape est d’équiper le robot avec une carte modem mmWave externe, la configurer et la tester.
 
 Les objectifs de ce projet sont :
 - Intégrer physiquement et logiquement une carte mmWave au robot. Le robot est
