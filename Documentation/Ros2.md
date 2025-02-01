@@ -329,6 +329,39 @@ Ainsi, on peut accéder tout de suite à la liste de tous les topics sur lesquel
 
 Il est alors possible d'accéder à nombre d'informations qui peuvent vous intéresser. 
 
+Par exemple, dans le topic **/diablo/sensor/Battery** on peut récupérer les informations de voltage, de courant traversant actuellement le robot, ainsi que son pourcentage de batterie. Les informations sont accessibles via cette commande :
+
+```bash
+ros2 topic echo /diablo/sensor/Battery
+```
+
+Et elles se présentent sous cette forme :
+
+```bash
+---
+header:
+  stamp:
+    sec: 1738418583
+    nanosec: 684166444
+  frame_id: diablo_robot
+voltage: 30.049760818481445
+temperature: 0.0
+current: 653.7999877929688
+charge: 0.0
+capacity: 0.0
+design_capacity: 0.0
+percentage: 36.0
+power_supply_status: 0
+power_supply_health: 0
+power_supply_technology: 0
+present: false
+cell_voltage: []
+cell_temperature: []
+location: ''
+serial_number: ''
+---
+```
+
 ## **Bibliographie**
 
 Manuel du robot Diablo
