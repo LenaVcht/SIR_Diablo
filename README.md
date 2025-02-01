@@ -6,7 +6,7 @@
 
 **Référents :** Razvan Stanica (TC), Olivier Bielecki (Cité des Sciences et de l’Industrie)
 
-La technologie mmWave sur les fréquences 26 GHz à été beaucoup mise en avant lors de la création des standards 5G, notamment pour les débits importants qu’elle permet d’ateindre. Cependant, son utilisaton actuelle est encore très limitée, surtout en Europe. Même le
+La technologie mmWave sur les fréquences 26 GHz à été beaucoup mise en avant lors de la création des standards 5G, notamment pour les débits importants qu’elle permet d’atteindre. Cependant, son utilisation actuelle est encore très limitée, surtout en Europe. Même le
 nombre de licences accordées pour opérer dans la bande de 26 GHz reste faible.
 
 Les objectifs de ce projet sont :
