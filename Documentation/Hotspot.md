@@ -1,7 +1,7 @@
 # Transformer un Raspberry Pi en Point d'Accès WiFi
 
 ## Introduction
-Avez-vous déjà été dans un endroit sans WiFi et sans accès au hotspot de vos amis ? Dans ce tutoriel, nous allons voir comment transformer un **Raspberry Pi** en **point d'accès WiFi**, étape par étape. Ce projet vous coûtera moins de **100 USD** !
+
 
 ## Matériel Nécessaire
 ### Liste des composants :
