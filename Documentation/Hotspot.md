@@ -3,11 +3,7 @@
 ## Introduction
 
 
-## Matériel Nécessaire
-### Liste des composants :
-- **Raspberry Pi 3** *(tout modèle fonctionne, mais celui-ci est plus stable)* : [Lien Amazon](https://www.amazon.com/Raspberry-Pi-MS-004-00000024-Model-Board/dp/B01LPLPBS8)
-- **Clé WiFi** *(optionnel, mais améliore le signal)* : [Lien Amazon](https://www.amazon.com/Adapter-1200Mbps-TECHKEY-Wireless-Network-300Mbps/dp/B07J65G9DD)
-- **Clavier, souris, écran, alimentation** (ex : powerbank)
+
 
 ---
 
