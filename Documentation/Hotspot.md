@@ -153,16 +153,5 @@ sudo reboot
 ## Étape 10 : Connexion au Point d'Accès
 Depuis un autre appareil, recherchez le réseau nommé `MON_RESEAU` et connectez-vous avec `MON_MOT_DE_PASSE`.
 
-## Conclusion 🎉
-Votre Raspberry Pi fonctionne maintenant comme un **point d'accès WiFi** ! Vous pouvez l'utiliser pour partager une connexion internet ou créer un réseau local. 🚀
-
----
-
-📌 *Pour toute question ou amélioration, n'hésitez pas à contribuer sur GitHub !* 💡
-
-
-
-
-
 
 lien vers le tutorial https://www.instructables.com/Raspberry-Pi-Wifi-Hotspot/ 
