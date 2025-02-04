@@ -83,7 +83,10 @@ Une fois le robot et l'ordinateur connectés, que cela soit en wifi ou ethernet,
 ```bash
 ifconfig
 ```
-A rajouter : le retour de la commande et ou ce trouvent les adresses ip
+
+<p align="center">
+  <img src="https://drive.google.com/file/d/1TCRs2vecG8y6Eb3st2jU6PRwKusAZ2xW/view?usp=drive_link" width="500">
+</p>
 
 Enfin, pour démarrer la connexion SSH, on execute la commande :
 ```bash/powershell
