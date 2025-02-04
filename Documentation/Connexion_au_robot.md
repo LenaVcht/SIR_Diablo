@@ -85,7 +85,7 @@ ifconfig
 ```
 
 <p align="center">
-  <img src="https://drive.google.com/file/d/1TCRs2vecG8y6Eb3st2jU6PRwKusAZ2xW/view?usp=drive_link" width="500">
+  <img src="images/ifconfig.png="500">
 </p>
 
 Enfin, pour démarrer la connexion SSH, on execute la commande :
