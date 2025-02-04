@@ -14,7 +14,6 @@
 </p>
 
 ## **Sommaire**
-- Le robot Diablo
 - [Connexion au robot](Connexion_au_robot.md)
 - [Ros2](Ros2.md)
 - [Hotspot](Hotspot.md)
