@@ -154,4 +154,3 @@ sudo reboot
 Depuis un autre appareil, recherchez le réseau nommé `MON_RESEAU` et connectez-vous avec `MON_MOT_DE_PASSE`.
 
 
-lien vers le tutorial https://www.instructables.com/Raspberry-Pi-Wifi-Hotspot/ 
