@@ -84,9 +84,12 @@ Une fois le robot et l'ordinateur connectés, que cela soit en wifi ou ethernet,
 ifconfig
 ```
 
+Voici ce que l'on obtient :
 <p align="center">
-  <img src="images/ifconfig.png="500">
+  <img src="images/ifconfig.png" width="500">
 </p>
+
+Il faut prendre l'adresse ip de l'interface wlan0 pour le wifi ou eth0 pour ethernet.
 
 Enfin, pour démarrer la connexion SSH, on execute la commande :
 ```bash/powershell
