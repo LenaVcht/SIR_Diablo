@@ -86,7 +86,8 @@ rsn_pairwise=CCMP
 ssid=MON_RESEAU
 wpa_passphrase=MON_MOT_DE_PASSE
 ```
-Remplacez `MON_RESEAU` et `MON_MOT_DE_PASSE` par vos propres identifiants. Dans ce cas, nous avons mis 'demo' et 'demo12345'
+- Définit les paramètres du point d'accès (nom du réseau, sécurité, canal WiFi).
+- Remplacez `MON_RESEAU` et `MON_MOT_DE_PASSE` par vos propres identifiants. Dans ce cas, nous avons mis `demo` et `demo12345`
 
 Associez ce fichier à `hostapd` :
 ```bash
@@ -106,6 +107,7 @@ Trouvez la ligne `#net.ipv4.ip_forward=1` et décommentez-la :
 ```ini
 net.ipv4.ip_forward=1
 ```
+Permet au Raspberry Pi de transférer les paquets entre ses interfaces réseau.
 
 ## Étape 7 : Ajout d'une Règle Iptables
 Ajoutez une règle NAT :
@@ -124,6 +126,8 @@ Ajoutez avant `exit 0` :
 ```bash
 iptables-restore < /etc/iptables.ipv4.nat
 ```
+- `iptables` redirige les paquets entre `wlan0` et `eth0`.
+- `MASQUERADE` permet aux clients WiFi d'accéder à Internet via le Raspberry Pi.
 
 ## Étape 8 : Création d'un Pont Réseau (`br0`)
 Installez le paquet nécessaire :
@@ -150,7 +154,8 @@ address 192.168.38.220
 netmask 255.255.255.0
 bridge_ports eth0 wlan0
 ```
-
+- `br0` fusionne `wlan0` et `eth0` pour partager la connexion Ethernet avec les clients WiFi.
+- 
 ## Étape 9 : Redémarrage
 Redémarrez le Raspberry Pi :
 ```bash
@@ -158,6 +163,6 @@ sudo reboot
 ```
 
 ## Étape 10 : Connexion au Point d'Accès
-Depuis un autre appareil, recherchez le réseau nommé `MON_RESEAU` et connectez-vous avec `MON_MOT_DE_PASSE`. Dans ce cas, 'demo' et 'demo12345'
+Depuis un autre appareil, recherchez le réseau nommé `MON_RESEAU` et connectez-vous avec `MON_MOT_DE_PASSE`. Dans ce cas, `demo` et `demo12345`
 
 
