@@ -1,7 +1,7 @@
 # Transformer un Raspberry Pi en Point d'Accès WiFi
 
 ## Introduction
-
+Ce guide explique comment configurer un Raspberry Pi en point d'accès WiFi avec connexion Internet. Nous utiliserons `hostapd` pour créer le point d'accès, `dnsmasq` pour gérer le DHCP et un pont réseau (`br0`) entre l'interface Ethernet (`eth0`) et WiFi (`wlan0`).
 
 
 
@@ -29,6 +29,9 @@ Désactivez temporairement ces services :
 sudo systemctl stop hostapd
 sudo systemctl stop dnsmasq
 ```
+- `hostapd` transforme le Raspberry Pi en un point d'accès WiFi.
+- `dnsmasq` attribue automatiquement des adresses IP aux clients WiFi.
+- Nous arrêtons les services temporairement avant de les configurer.
 
 ## Étape 3 : Configuration d'une IP Statique pour `wlan0`
 Éditez le fichier de configuration :
@@ -58,6 +61,8 @@ Ajoutez :
 interface=wlan0
 dhcp-range=192.168.38.11,192.168.38.255,255.255.255.0,24h
 ```
+- Définit la plage d'adresses IP pour les clients WiFi.
+- `dnsmasq` gère ces adresses et les distribue dynamiquement.
 
 ## Étape 5 : Configuration du Point d'Accès (`hostapd`)
 Créez le fichier de configuration :
