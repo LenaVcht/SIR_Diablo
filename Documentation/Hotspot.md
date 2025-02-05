@@ -38,11 +38,11 @@ sudo nano /etc/dhcpcd.conf
 Ajoutez ces lignes à la fin :
 ```ini
 interface wlan0
-static ip_address=192.168.0.10/24
+static ip_address=192.168.38.1/24
 denyinterfaces eth0
 denyinterfaces wlan0
 ```
-Sauvegardez avec `CTRL+X`, `Y`, puis `ENTRÉE`.
+
 
 ## Étape 4 : Configuration du Serveur DHCP (`dnsmasq`)
 Renommez l'ancien fichier de configuration :
@@ -56,7 +56,7 @@ sudo nano /etc/dnsmasq.conf
 Ajoutez :
 ```ini
 interface=wlan0
-dhcp-range=192.168.0.11,192.168.0.30,255.255.255.0,24h
+dhcp-range=192.168.38.11,192.168.38.255,255.255.255.0,24h
 ```
 
 ## Étape 5 : Configuration du Point d'Accès (`hostapd`)
@@ -81,7 +81,7 @@ rsn_pairwise=CCMP
 ssid=MON_RESEAU
 wpa_passphrase=MON_MOT_DE_PASSE
 ```
-Remplacez `MON_RESEAU` et `MON_MOT_DE_PASSE` par vos propres identifiants.
+Remplacez `MON_RESEAU` et `MON_MOT_DE_PASSE` par vos propres identifiants. Dans ce cas, nous avons mis 'demo' et 'demo12345'
 
 Associez ce fichier à `hostapd` :
 ```bash
@@ -141,6 +141,8 @@ Ajoutez à la fin :
 ```ini
 auto br0
 iface br0 inet manual
+address 192.168.38.220
+netmask 255.255.255.0
 bridge_ports eth0 wlan0
 ```
 
@@ -151,6 +153,6 @@ sudo reboot
 ```
 
 ## Étape 10 : Connexion au Point d'Accès
-Depuis un autre appareil, recherchez le réseau nommé `MON_RESEAU` et connectez-vous avec `MON_MOT_DE_PASSE`.
+Depuis un autre appareil, recherchez le réseau nommé `MON_RESEAU` et connectez-vous avec `MON_MOT_DE_PASSE`. Dans ce cas, 'demo' et 'demo12345'
 
 
