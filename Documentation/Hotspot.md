@@ -177,5 +177,5 @@ Cela signifie que l'autre appareil doit être connecté au hotspot du robot, dan
 ## **Bibliographie**
 
 Site du tutoriel : \
-[https://manuals.plus/sierra-wireless/airprime-em9190-5g-module-manual](https://www.instructables.com/Raspberry-Pi-Wifi-Hotspot/) \
+[https://manuals.plus/sierra-wireless/airprime-em9190-5g-module-manual](https://www.instructables.com/Raspberry-Pi-Wifi-Hotspot/)
 
