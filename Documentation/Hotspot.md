@@ -173,3 +173,9 @@ ssh diablo@192.168.38.220
 ```
 Cependant, attention : SSH ne fonctionne que lorsque les deux appareils sont sur le même réseau.
 Cela signifie que l'autre appareil doit être connecté au hotspot du robot, dans ce cas, au réseau `demo` avec le mot de passe `demo12345`.
+
+## **Bibliographie**
+
+Site du tutoriel : \
+[https://manuals.plus/sierra-wireless/airprime-em9190-5g-module-manual](https://www.instructables.com/Raspberry-Pi-Wifi-Hotspot/) \
+
