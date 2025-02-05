@@ -172,4 +172,4 @@ Ainsi, pour se connecter au robot via SSH, il suffit de taper la commande :
 ssh diablo@192.168.38.220
 ```
 Cependant, attention : SSH ne fonctionne que lorsque les deux appareils sont sur le même réseau.
-Cela signifie que l'autre appareil doit être connecté au hotspot du robot, c'est-à-dire au réseau "demo" avec le mot de passe "demo12345".
+Cela signifie que l'autre appareil doit être connecté au hotspot du robot, dans ce cas, au réseau `demo` avec le mot de passe `demo12345`.
