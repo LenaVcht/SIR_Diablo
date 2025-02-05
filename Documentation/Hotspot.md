@@ -3,17 +3,6 @@
 ## Introduction
 Ce guide explique comment configurer un Raspberry Pi en point d'accès WiFi avec connexion Internet. Nous utiliserons `hostapd` pour créer le point d'accès, `dnsmasq` pour gérer le DHCP et un pont réseau (`br0`) entre l'interface Ethernet (`eth0`) et WiFi (`wlan0`).
 
-## Remarque
-
-Dans notre cas, nous avons attribué l'adresse IP `192.168.38.220` à `br0`.  
-Ainsi, pour se connecter au robot via SSH, il suffit de taper la commande :
-
-```bash
-ssh diablo@192.168.38.220
-```
-Cependant, attention : SSH ne fonctionne que lorsque les deux appareils sont sur le même réseau.
-Cela signifie que l'autre appareil doit être connecté au hotspot du robot, c'est-à-dire au réseau "demo" avec le mot de passe "demo12345".
-
 ---
 
 ## Étape 1 : Installation et Mise à Jour de Raspbian
@@ -174,4 +163,13 @@ sudo reboot
 ## Étape 10 : Connexion au Point d'Accès
 Depuis un autre appareil, recherchez le réseau nommé `MON_RESEAU` et connectez-vous avec `MON_MOT_DE_PASSE`. Dans ce cas, `demo` et `demo12345`
 
+## Remarque
 
+Dans notre cas, nous avons attribué l'adresse IP `192.168.38.220` à `br0`.  
+Ainsi, pour se connecter au robot via SSH, il suffit de taper la commande :
+
+```bash
+ssh diablo@192.168.38.220
+```
+Cependant, attention : SSH ne fonctionne que lorsque les deux appareils sont sur le même réseau.
+Cela signifie que l'autre appareil doit être connecté au hotspot du robot, c'est-à-dire au réseau "demo" avec le mot de passe "demo12345".
