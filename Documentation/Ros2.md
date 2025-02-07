@@ -300,16 +300,22 @@ La classe "KeyboardNodeControl" est la classe principale pour contrôler le robo
 
 Ainsi, le script capture les touches pressées sur le clavier, les lit, update le message MotionCmd à envoyer avant de le publier sur le topic, ce qui met le robot en mouvement pendant 0.5 secondes si on relâche la touche et en continu si on continue à appuyer. Le contrôle se fait en temps réel. Les fonctionnalités sont les suivantes:
 
-- Avancer: flèche du haut,
-- Reculer: flèche du bas,
-- Tourner à droite: flèche de droite,
-- Tourner à gauche: flèche de gauche,
-- Augmenter la vitesse: +,
-- Réduire la vitesse: -,
-- m: mode marche,
-- j: saut,
-- s: mode split,
-- Ctrl+C: quitter.
+- flèche du haut: avance,
+- flèche du bas: recule
+- flèche de droite: tourne à droite,
+- flèche de gauche: tourne à gauche,
+- +: augmente la vitesse,
+- -: réduire la vitesse,
+
+- w: crawling mode (en bas),
+- q: standing mode (levé),
+- g: penché vers la gauche
+- j: penché vers la droite
+- y: regarde en l'air
+- n: regarde vers le bas
+- h: se tient droit, regarde en face
+  
+- ` puis Ctrl+C: quitter.
 
 ### **Récupération d'informations depuis le robot**
 
